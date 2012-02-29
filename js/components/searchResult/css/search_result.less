@@ -1,0 +1,95 @@
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #bbe88b;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #bbe88b;
+	box-shadow:inset 0px 1px 0px 0px #bbe88b;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #aacc93;
+	display:inline-block;
+	color:#ffffff;
+	font-family: 16px/18px "Calibri", "Lucida Sans", sans-serif;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #3d6936;
+}
+
+.active.button {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #62c43f), color-stop(1, #39691f) );
+	background:-moz-linear-gradient( center top, #62c43f 5%, #39691f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#62c43f', endColorstr='#39691f');
+	background-color:#62c43f;
+}
+
+.active.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #39691f), color-stop(1, #62c43f) );
+	background:-moz-linear-gradient( center top, #39691f 5%, #62c43f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#39691f', endColorstr='#62c43f');
+	background-color:#39691f;
+}
+
+
+.inactive.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#ededed;
+	border:1px solid #dcdcdc;
+	color:#777777;
+	text-shadow:1px 1px 0px #ffffff;
+}
+
+.search-result {
+  overflow: hidden;
+  background: #fff;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, .1);
+  -moz-box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, .1);
+  box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, .1);
+  padding: 20px;
+  margin: 20px;
+}
+
+.search-result img {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.search-result .info {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.search-result .title {
+  font: 24px/36px "Calibri", "Lucida Sans", sans-serif;
+  font-weight: bold;
+  color: #56b639;
+  margin: 0 10px 10px 0;
+}
+
+.search-result .time {
+  color: #8560a8;
+  font: 12px/16px Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+.search-result p {
+  font: 14px/18px Georgia, "Times New Roman", serif;
+  color: #444;
+  margin: 10px 0;
+}
+
+.search-result .more-link {
+  font: 14px/18px "Calibri", "Lucida Sans", sans-serif;
+  font-weight: bold;
+  color: #56b639;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.search-result .button {
+  display: inline-block;
+  vertical-align: inherit;
+}
