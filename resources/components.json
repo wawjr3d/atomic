@@ -1,0 +1,25 @@
+{
+	"components": [
+		{
+			"id": 1,
+			"name": "Component 1",
+			"url": "/component1"
+		}, {
+			"id": 2,
+			"name": "Component 2",
+			"url": "/component2"
+		}, {
+			"id": 3,
+			"name": "Component 3",
+			"url": "/component3"
+		}, {
+			"id": 4,
+			"name": "Component 4",
+			"url": "/component4"
+		}, {
+			"id": 5,
+			"name": "Component 5",
+			"url": "/component5"
+		}
+	]
+}
