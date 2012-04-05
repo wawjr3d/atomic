@@ -1,0 +1,23 @@
+{
+	"css": [
+		"css/search_result.css"
+	],
+	"templates": {
+		"Default": {
+			"template": "templates/default.html",
+			"data": "demo/default.json"
+		},
+		"Saved": {
+			"template": "templates/saved.html",
+			"data": "demo/default.json"
+		},
+		"No Photo": {
+			"template": "templates/no_image.html",
+			"data": "demo/default.json"
+		},
+		"Zero State": {
+			"template": "templates/zero.html",
+			"data": "demo/default.json"
+		}
+	}
+}
