@@ -91,6 +91,10 @@ a:hover{
 	text-decoration: underline;
 }
 
+body, html{
+	height: 100%;
+}
+
 body{
 	background: url('img/linen.png');
 	font-family: "SignikaRegular", "Lucida Grande", Lucida Sans, Arial, serif;
@@ -218,11 +222,13 @@ body{
 }
 
 #component-list{
-	position: absolute;
 	width: 100%;
 	overflow: auto;
-	height: 81%;
-	top: 98px;
+	height: 100%;
+	padding-top: 98px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 
