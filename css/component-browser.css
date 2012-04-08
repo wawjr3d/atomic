@@ -96,7 +96,7 @@ body, html{
 }
 
 body{
-	background: url('img/linen.png');
+	background: url('../img/linen.png');
 	font-family: "SignikaRegular", "Lucida Grande", Lucida Sans, Arial, serif;
 	color: #333;
 }

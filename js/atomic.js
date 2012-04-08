@@ -37,6 +37,6 @@
     	});
     }
     
-    loadComponentTemplate("js/components/searchResult/component.json");
+    loadComponentTemplate("components/searchResult/component.json");
     
 })(jQuery, Mustache);
