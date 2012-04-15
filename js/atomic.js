@@ -10,17 +10,55 @@
 	var Component = function(propsFile) {
 		this.propsFile = propsFile;
 		this.path = propsFile.substring(0, propsFile.lastIndexOf("/"));
+		
+		this.templates = {};
+		this.data = {};
 		this.cssIds = [];
+		
+		this.templatesLoaded = $.Deferred();
+		this.dataLoaded = $.Deferred();
 	}
 	
 	Component.prototype = {
 			
 		loadTemplateFile: function(templateId) {
-			return $.get(this.path + "/" + this.props.templates[templateId].template);
+			if (this.templates[templateId]) { return; }
+			
+			return $.get(this.path + "/" + this.props.templates[templateId].template, $.proxy(function(template) {
+				this.templates[templateId] = template;
+			}, this));
+		},
+		
+		loadAllTemplates: function() {
+			var templates = [];
+			
+			for(templateId in this.props.templates) {
+				templates.push(this.loadTemplateFile(templateId));
+			}
+			
+			$.when.apply(this, templates).then($.proxy(function() {
+				this.templatesLoaded.resolve();
+			}, this));
 		},
 		
 		loadDataFile: function(templateId) {
-			return $.get(this.path + "/" + this.props.templates[templateId].data);
+			if (this.templates[templateId]) { return; }
+			
+			return $.get(this.path + "/" + this.props.templates[templateId].data, $.proxy(function(data) {
+				this.data[templateId] = data;
+			}, this));
+		},
+		
+		loadAllData: function() {
+			var datas = [];
+			
+			for(templateId in this.props.templates) {
+				datas.push(this.loadDataFile(templateId));
+			}
+			
+			$.when.apply(this, datas).then($.proxy(function() {
+				this.dataLoaded.resolve();
+			}, this));			
 		},
 		
 		loadCss: function(cssFile) {
@@ -48,22 +86,20 @@
 		},
 			
 		load: function() {
-			$.when(this.loadProps()).then($.proxy(function(props) {
-	        	
+			$.when(this.loadProps()).then($.proxy(function() {
 	        	this.loadAllCss();
-				
-	        	var finishedloadingTemplate = this.loadTemplateFile("Default");
-	        	var finishedloadingData = this.loadDataFile("Default");
-	        	
-	        	$.when(finishedloadingTemplate, finishedloadingData)
-		       	 .then(function(templateResult, dataResult) {
-		       		 
-		       		var template = getData(templateResult),
-		       			data = getData(dataResult);
-		       		
-		       		$componentStage.html(Mustache.to_html(template, data));
-		       	});
+	        	this.loadAllTemplates();
+	        	this.loadAllData();
 	    	}, this));	
+		},
+		
+		display: function(templateId) {
+			$.when(this.templatesLoaded, this.dataLoaded).then($.proxy(function() {
+				var template = this.templates[templateId],
+					data = this.data[templateId];
+				
+				$componentStage.html(Mustache.to_html(template, data));
+			}, this));
 		},
 		
 		destroy: function() {
@@ -74,5 +110,6 @@
     
     var component = new Component("components/searchResult/component.json");
     component.load();
+    component.display("No Photo");
     
 })(jQuery, Mustache);
