@@ -3,14 +3,11 @@
 	var cssId = 1,
 		$componentStage = $(".component");
 	
-	function getData(xhr) {
-		return xhr[0];
-	}
-	
 	var Component = function(propsFile) {
 		this.propsFile = propsFile;
 		this.path = propsFile.substring(0, propsFile.lastIndexOf("/"));
 		
+		// TODO: cache by file name to prevent loading files more than once
 		this.templates = {};
 		this.data = {};
 		this.cssIds = [];
