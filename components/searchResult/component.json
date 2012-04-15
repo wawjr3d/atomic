@@ -1,6 +1,8 @@
 {
 	"css": [
-		"css/search_result.css"
+		"css/search_result.css",
+		"css/test.css",
+		"css/untest.css"
 	],
 	"templates": {
 		"Default": {
