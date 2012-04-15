@@ -110,6 +110,12 @@
     
     var component = new Component("components/searchResult/component.json");
     component.load();
-    component.display("No Photo");
+    component.display("Default");
+    
+    $("#states ul a").click(function(e) {
+    	e.preventDefault();
+    	
+    	component.display($(this).attr("data-template-id"));
+    });
     
 })(jQuery, Mustache);
