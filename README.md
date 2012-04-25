@@ -1,4 +1,4 @@
-#AToMIC
+#atomic
 
 
 ##Component
