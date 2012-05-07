@@ -1,5 +1,8 @@
 @import "compass/reset";
-@import "compass/css3";
+@import "compass/css3/images";
+@import "compass/css3/box-shadow";
+@import "compass/css3/box-sizing";
+@import "compass/css3/border-radius";
 
 
 /*------------------------------------*\
@@ -60,15 +63,9 @@ body{
 #finder{
 	padding: 10px 0 0 5%;
 	width: auto;
+	
 	clear:both;
-	background: #666666; /* Old browsers */
-	background: -moz-linear-gradient(top,  #666666 0%, #2d2d2d 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#666666), color-stop(100%,#2d2d2d)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #666666 0%,#2d2d2d 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #666666 0%,#2d2d2d 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #666666 0%,#2d2d2d 100%); /* IE10+ */
-	background: linear-gradient(top,  #666666 0%,#2d2d2d 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#2d2d2d',GradientType=0 ); /* IE6-9 */
+	@include background-image(linear-gradient(top left, #666666, #2d2d2d));
 	@include box-shadow(inset 0px 0px 5px 3px rgba(0, 0, 0, .5));
 }
 
@@ -78,28 +75,13 @@ body{
 	padding: 10px 5% 5px;
 	width: 35%;
 	text-align: center;
+  border-top: rgba(255, 255, 255, .5) solid 1px;
 	@include border-radius(5px 5px 0 0);
-	border-top: rgba(255, 255, 255, .5) solid 1px;
-	background: #969696; /* Old browsers */
-	background: -moz-linear-gradient(top,  #969696 0%, #666666 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#969696), color-stop(100%,#666666)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #969696 0%,#666666 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #969696 0%,#666666 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #969696 0%,#666666 100%); /* IE10+ */
-	background: linear-gradient(top,  #969696 0%,#666666 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#969696', endColorstr='#666666',GradientType=0 ); /* IE6-9 */
-	
+	@include background-image(linear-gradient(top left, #969696, #666666));
 }
 
 #finder li.active{
-	background: #79b6dc; /* Old browsers */
-	background: -moz-linear-gradient(top,  #79b6dc 0%, #5ea7d5 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#79b6dc), color-stop(100%,#5ea7d5)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #79b6dc 0%,#5ea7d5 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #79b6dc 0%,#5ea7d5 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #79b6dc 0%,#5ea7d5 100%); /* IE10+ */
-	background: linear-gradient(top,  #79b6dc 0%,#5ea7d5 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79b6dc', endColorstr='#5ea7d5',GradientType=0 ); /* IE6-9 */
+	@include background-image(linear-gradient(top left, #79b6dc, #5ea7d5));
 }
 
 #finder li a{
@@ -115,14 +97,7 @@ body{
 #search{
 	padding: 13px 5%;
 	width: auto;
-	background: #5ea7d5; /* Old browsers */
-	background: -moz-linear-gradient(top,  #5ea7d5 0%, #286893 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5ea7d5), color-stop(100%,#286893)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #5ea7d5 0%,#286893 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #5ea7d5 0%,#286893 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #5ea7d5 0%,#286893 100%); /* IE10+ */
-	background: linear-gradient(top,  #5ea7d5 0%,#286893 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ea7d5', endColorstr='#286893',GradientType=0 ); /* IE6-9 */
+	@include background-image(linear-gradient(top left, #5ea7d5, #286893));
 }
 
 .faux-search-box{
