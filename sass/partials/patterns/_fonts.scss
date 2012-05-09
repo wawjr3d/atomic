@@ -1,0 +1,8 @@
+$serif-font: "SignikaRegular", "Lucida Grande", Lucida Sans, Arial, serif;
+
+@include font-face("SignikaRegular",
+                    font-files("Signika-Regular-webfont.woff",
+                               "Signika-Regular-webfont.ttf",
+                               "Signika-Regular-webfont.svg#SignikaRegular"),
+                    "Signika-Regular-webfont.eot",
+                    normal, normal);
