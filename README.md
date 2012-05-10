@@ -1,7 +1,7 @@
 #atomic
 
 
-##Component
+##What is a Component?
 A directory containing the following directories
 - css
 - js
@@ -25,7 +25,9 @@ The associated PSDs or images
 Sample data that the component will render
 
 
-##Repos
+##Where do components live?
+**In your project's repos**
+
 One for component code
 
 One for component assets
