@@ -1,4 +1,4 @@
-(function($, Mustache, undefined) {
+(function($, Mustache, Components, undefined) {
 	
 	var cssId = 1,
 		$componentStage = $(".component");
@@ -114,5 +114,14 @@
     	
     	component.display($(this).attr("data-template-id"));
     });
+
     
-})(jQuery, Mustache);
+    var components = new Components("resources/components.json");
+    components.load();
+    
+    $('#search input[type=text]').keyup(function(){
+        var searchText = $(this).val();
+        components.filter(searchText);
+    });
+    
+})(jQuery, Mustache, Components);
