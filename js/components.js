@@ -40,14 +40,14 @@ ComponentList.prototype = {
     },
     
     filter: function(letters) {
-        var matchingComponents = this.search(letters);
+        matchingComponents = this.search(letters);
         this.renderList(matchingComponents);
     },
     
     search: function(letters){
         if(letters == "") return this.components;
  
-        var pattern = new RegExp(letters,"gi");
+        var pattern = new RegExp(letters,"i");
         return _.filter(this.components, function(component) {
             return pattern.test(component.name);
         });

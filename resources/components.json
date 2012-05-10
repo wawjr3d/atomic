@@ -6,8 +6,8 @@
 			"url": "/component1"
 		}, {
 			"id": 2,
-			"name": "Component 2",
-			"url": "/component2"
+			"name": "Search Result",
+			"url": "/components/searchResult/component.json"
 		}, {
 			"id": 3,
 			"name": "Component 3",
