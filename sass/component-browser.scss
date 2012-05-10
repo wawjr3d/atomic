@@ -31,7 +31,7 @@ body, html{
 }
 
 body{
-	@include background-image(image-url("linen.png"));
+	background: image-url("linen.png");
 	font-family: $serif-font;
 	color: #333;
 }
@@ -94,28 +94,27 @@ body{
 
 .faux-search-box{
 	background: #fff;
-	-webkit-box-shadow: inset 0 3px 3px 1px rgba(50%, 50%, 50%, .5);
-	-moz-box-shadow: inset 0 3px 3px 1px rgba(50%, 50%, 50%, .5);
-	box-shadow: inset 0 3px 3px 1px rgba(50%, 50%, 50%, .5);
+	@include box-shadow(inset 0 3px 3px 1px rgba(50%, 50%, 50%, .5));
 	@include border-radius(20px);
 	padding: 5px 5%;
 	width: 85%;
 }
-#search input[type="text"]{
+#search input[type=text]{
 	border: none;
 	width: 85%;
 	background: none;
 }
 
-#search button{
-	border-left: 1px solid #ccc;
-	border-top: none;
-	border-bottom: none;
-	border-right: none;
-	background: none;
-	cursor: hand;
-	padding: 0 1%;
-
+#search input[type=submit] {
+  background: image-url("search-icon.png") no-repeat center right;
+  width: 16px;
+  height: 16px;
+  text-indent: -9999em;
+  padding: 0 1%;
+  margin: 0;
+  border: 0 none;
+  border-left: 1px solid #ccc;
+  cursor: pointer;
 }
 
 #component-list{
@@ -143,7 +142,6 @@ body{
 
 #component-list li a{
 	font: .8em/1em $serif-font;
-	color: #2370a9;
 	text-decoration: none;
 }
 
@@ -185,9 +183,7 @@ body{
 	float: right;
 	padding: .8em;
 	background: #b6b6b6; 
-	-webkit-box-shadow: inset 0 3px 3px 1px rgba(50%, 50%, 50%, .5);
-	-moz-box-shadow: inset 0 3px 3px 1px rgba(50%, 50%, 50%, .5);
-	box-shadow: inset 0 3px 3px 1px rgba(50%, 50%, 50%, .5);
+  @include box-shadow(inset 0 3px 3px 1px rgba(50%, 50%, 50%, .5));
 	@include border-radius(5px);
 }
 
@@ -212,8 +208,6 @@ body{
 
 #component-view{
 	clear: both;
-	-webkit-box-shadow: inset 0 0 10px 8px rgba(0, 0, 0, .3);
-	-moz-box-shadow: inset 0 0 10px 8px rgba(0, 0, 0, .3);
-	box-shadow: inset 0 0 10px 8px rgba(0, 0, 0, .3);
+	@include box-shadow(inset 0 0 10px 8px rgba(0, 0, 0, .3));
 	min-height: 470px;
 }

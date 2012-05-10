@@ -94,7 +94,7 @@ body, html {
 
 /* line 33, ../sass/component-browser.scss */
 body {
-  background-image: url('../img/linen.png?1335396459');
+  background: url('../img/linen.png?1335396459');
   font-family: "SignikaRegular", "Lucida Grande", Lucida Sans, Arial, serif;
   color: #333;
 }
@@ -202,25 +202,27 @@ body {
   width: 85%;
 }
 
-/* line 104, ../sass/component-browser.scss */
-#search input[type="text"] {
+/* line 102, ../sass/component-browser.scss */
+#search input[type=text] {
   border: none;
   width: 85%;
   background: none;
 }
 
-/* line 110, ../sass/component-browser.scss */
-#search button {
-  border-left: 1px solid #ccc;
-  border-top: none;
-  border-bottom: none;
-  border-right: none;
-  background: none;
-  cursor: hand;
+/* line 108, ../sass/component-browser.scss */
+#search input[type=submit] {
+  background: url('../img/search-icon.png?1335396459') no-repeat center right;
+  width: 16px;
+  height: 16px;
+  text-indent: -9999em;
   padding: 0 1%;
+  margin: 0;
+  border: 0 none;
+  border-left: 1px solid #ccc;
+  cursor: pointer;
 }
 
-/* line 121, ../sass/component-browser.scss */
+/* line 120, ../sass/component-browser.scss */
 #component-list {
   width: 100%;
   height: 100%;
@@ -230,13 +232,13 @@ body {
   box-sizing: border-box;
 }
 
-/* line 128, ../sass/component-browser.scss */
+/* line 127, ../sass/component-browser.scss */
 #component-list ul {
   overflow: auto;
   height: 100%;
 }
 
-/* line 133, ../sass/component-browser.scss */
+/* line 132, ../sass/component-browser.scss */
 #component-list li {
   padding: 3%;
   background: #ebebeb;
@@ -244,20 +246,19 @@ body {
   border-bottom: 1px solid #d7d7d7;
 }
 
-/* line 140, ../sass/component-browser.scss */
+/* line 139, ../sass/component-browser.scss */
 #component-list li.active, #component-list li:hover {
   background: #fffcdc;
 }
 
-/* line 144, ../sass/component-browser.scss */
+/* line 143, ../sass/component-browser.scss */
 #component-list li a {
   font: 0.8em/1em "SignikaRegular", "Lucida Grande", Lucida Sans, Arial, serif;
-  color: #2370a9;
   text-decoration: none;
 }
 
 /* ---------- Component Panel styles ---------- */
-/* line 153, ../sass/component-browser.scss */
+/* line 151, ../sass/component-browser.scss */
 #component-panel {
   width: 80%;
   height: 100%;
@@ -265,35 +266,35 @@ body {
   margin-left: 20%;
 }
 
-/* line 160, ../sass/component-browser.scss */
+/* line 158, ../sass/component-browser.scss */
 #component-details {
   background: #c4c4c4;
   padding: 1em;
 }
 
-/* line 165, ../sass/component-browser.scss */
+/* line 163, ../sass/component-browser.scss */
 #component-details h1 {
   font: 2em/1.5em "SignikaRegular", "Lucida Grande", Lucida Sans, Arial, serif;
 }
 
-/* line 169, ../sass/component-browser.scss */
+/* line 167, ../sass/component-browser.scss */
 #component-details p {
   font: 0.8em/0.8em "SignikaRegular", "Lucida Grande", Lucida Sans, Arial, serif;
   color: #969696;
 }
 
-/* line 174, ../sass/component-browser.scss */
+/* line 172, ../sass/component-browser.scss */
 #component-details time {
   font-style: italic;
   color: #666;
 }
 
-/* line 179, ../sass/component-browser.scss */
+/* line 177, ../sass/component-browser.scss */
 #component-details h2 {
   font: 1.5em/1.5em "SignikaRegular", "Lucida Grande", Lucida Sans, Arial, serif;
 }
 
-/* line 183, ../sass/component-browser.scss */
+/* line 181, ../sass/component-browser.scss */
 #component-details a.assets-link {
   display: block;
   float: right;
@@ -309,12 +310,12 @@ body {
   border-radius: 5px;
 }
 
-/* line 194, ../sass/component-browser.scss */
+/* line 190, ../sass/component-browser.scss */
 #component-details img {
   padding-left: .8em;
 }
 
-/* line 199, ../sass/component-browser.scss */
+/* line 195, ../sass/component-browser.scss */
 #states {
   float: left;
   border-right: 1px solid #969696;
@@ -322,14 +323,14 @@ body {
   padding-right: 20px;
 }
 
-/* line 206, ../sass/component-browser.scss */
+/* line 202, ../sass/component-browser.scss */
 #data {
   float: left;
   margin: 20px 20px 20px 0;
   padding-right: 20px;
 }
 
-/* line 213, ../sass/component-browser.scss */
+/* line 209, ../sass/component-browser.scss */
 #component-view {
   clear: both;
   -webkit-box-shadow: inset 0 0 10px 8px rgba(0, 0, 0, 0.3);
