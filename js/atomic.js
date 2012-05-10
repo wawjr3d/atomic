@@ -1,4 +1,4 @@
-(function($, Mustache, Components, undefined) {
+(function($, Mustache, ComponentList, undefined) {
 	
 	var cssId = 1,
 		$componentStage = $(".component");
@@ -116,7 +116,7 @@
     });
 
     
-    var components = new Components("resources/components.json");
+    var components = new ComponentList("resources/components.json");
     components.load();
     
     $('#search input[type=text]').keyup(function(){
@@ -124,4 +124,4 @@
         components.filter(searchText);
     });
     
-})(jQuery, Mustache, Components);
+})(jQuery, Mustache, ComponentList);

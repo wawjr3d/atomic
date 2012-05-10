@@ -1,4 +1,4 @@
-var Components = function(propsFile) {
+var ComponentList = function(propsFile) {
     this.propsFile = propsFile;
     this.path = propsFile.substring(0, propsFile.lastIndexOf("/"));
 
@@ -10,7 +10,7 @@ var Components = function(propsFile) {
     
 }
 
-Components.prototype = {
+ComponentList.prototype = {
    
     loadComponents: function() {
         $.getJSON(this.propsFile, $.proxy(function(data) {
