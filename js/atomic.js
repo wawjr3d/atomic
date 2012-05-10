@@ -119,9 +119,21 @@
     var components = new ComponentList("resources/components.json");
     components.load();
     
+
+    var delay = (function() {
+        var timer = 0;
+        return function(callback, ms) {
+            clearTimeout(timer);
+            timer = setTimeout(callback, ms);
+        };
+    })();
+    
+    // TODO: move this into ComponentList
     $('#search input[type=text]').keyup(function(){
         var searchText = $(this).val();
-        components.filter(searchText);
+        delay(function() {
+            components.filter(searchText);
+        }, 200);
     });
     
 })(jQuery, Mustache, ComponentList);
