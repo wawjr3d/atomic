@@ -23,7 +23,7 @@
 			
 			return $.get(this.path + "/" + this.props.templates[templateId].template, $.proxy(function(template) {
 				this.templates[templateId] = template;
-			}, this));
+			}, this), "html");
 		},
 		
 		loadAllTemplates: function() {
@@ -43,7 +43,7 @@
 			
 			return $.get(this.path + "/" + this.props.templates[templateId].data, $.proxy(function(data) {
 				this.data[templateId] = data;
-			}, this));
+			}, this), "json");
 		},
 		
 		loadAllData: function() {
@@ -79,7 +79,7 @@
 		loadProps: function() {
 			return this.props || $.get(this.propsFile, $.proxy(function(props) {
 				this.props = props;
-			}, this));
+			}, this), "json");
 		},
 			
 		load: function() {
