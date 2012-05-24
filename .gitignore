@@ -2,4 +2,4 @@
 ################
 *.project
 .sass-cache/
-.css/
+css/*
