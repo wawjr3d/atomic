@@ -1,0 +1,11 @@
+{
+	"css": [
+		"css/leadItem.css"
+	],
+	"templates": {
+		"Default": {
+			"template": "templates/default.html",
+			"data": "demo/default.json"
+		}
+	}
+}

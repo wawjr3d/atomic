@@ -2,8 +2,8 @@
 	"components": [
 		{
 			"id": 1,
-			"name": "Component 1",
-			"url": "/component1"
+			"name": "Lead Item",
+			"url": "/components/leadItem/component.json"
 		}, {
 			"id": 2,
 			"name": "Search Result",

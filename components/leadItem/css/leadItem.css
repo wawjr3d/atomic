@@ -1,1 +1,58 @@
-testing
+@font-face {
+  font-family: "GandhiSans";
+  src: url(/fonts/GandhiSans-Regular-webfont.eot);
+  src: url(/fonts/GandhiSans-Regular-webfont.eot?#iefix) format('eot'), url(/fonts/GandhiSans-Regular-webfont.ttf) format('truetype'), url(/fonts/GandhiSans-Regular-webfont.woff) format('woff'), url(/fonts/GandhiSans-Regular-webfont.otf) format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #438bca;
+}
+
+a:hover {
+  color: #6ba4d5;
+  text-decoration: underline;
+}
+
+.lead-title {
+  font-family: "GandhiSans", Calibri, Verdana, sans-serif;
+  color: #438bca;
+  font-size: 1.4em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.subtext {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: inherit;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.75em;
+}
+
+.status-label {
+  font-family: "GandhiSans", Calibri, Verdana, sans-serif;
+  color: #438bca;
+  font-size: 0.7em;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #FFF;
+  padding: 0.3em 0.6em 0.2em;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 0 3px rgba(138, 180, 221, 0.2);
+  -moz-box-shadow: 0 0 0 3px rgba(138, 180, 221, 0.2);
+  box-shadow: 0 0 0 3px rgba(138, 180, 221, 0.2);
+  color: #669DD5;
+}
+
