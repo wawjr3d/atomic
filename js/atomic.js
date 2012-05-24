@@ -136,4 +136,15 @@
         }, 200);
     });
     
+    $("#component-list").delegate("ul a", "click", function(e) {
+    	e.preventDefault();
+    	
+    	var $link = $(this),
+    		componentJsonUrl = $link.attr("href"); 
+    	
+        var component = new Component(componentJsonUrl);
+        component.load();
+        component.display("Default");
+    });
+    
 })(jQuery, Mustache, ComponentList);

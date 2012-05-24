@@ -3,11 +3,11 @@
 		{
 			"id": 1,
 			"name": "Lead Item",
-			"url": "/components/leadItem/component.json"
+			"url": "components/leadItem/component.json"
 		}, {
 			"id": 2,
 			"name": "Search Result",
-			"url": "/components/searchResult/component.json"
+			"url": "components/searchResult/component.json"
 		}, {
 			"id": 3,
 			"name": "Component 3",
