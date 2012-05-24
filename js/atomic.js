@@ -1,7 +1,7 @@
 (function($, Mustache, ComponentList, undefined) {
 	
 	var cssId = 1,
-		$componentStage = $(".component");
+		$componentStage = $("#component-view");
 	
 	var Component = function(propsFile) {
 		this.propsFile = propsFile;
