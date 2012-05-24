@@ -132,17 +132,17 @@ body{
 #component-list li {
 	padding: 3%;
 	background:#ebebeb;
+	color: $link-color;
+	font: .8em/1em $serif-font;
+	text-decoration: none;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #d7d7d7;
 }
 
-#component-list li.active, #component-list li:hover {
+#component-list li.active,
+#component-list li:hover,
+#component-list li.highlighted {
 	background:#fffcdc;
-}
-
-#component-list li a{
-	font: .8em/1em $serif-font;
-	text-decoration: none;
 }
 
 

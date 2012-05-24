@@ -129,22 +129,34 @@
     })();
     
     // TODO: move this into ComponentList
-    $('#search input[type=text]').keyup(function(){
-        var searchText = $(this).val();
-        delay(function() {
-            components.filter(searchText);
-        }, 200);
-    });
+//    $('#search input[type=text]').keyup(function(){
+//        var searchText = $(this).val();
+//        delay(function() {
+//            components.filter(searchText);
+//        }, 200);
+//    });
     
-    $("#component-list").delegate("ul a", "click", function(e) {
-    	e.preventDefault();
-    	
-    	var $link = $(this),
-    		componentJsonUrl = $link.attr("href"); 
-    	
-        var component = new Component(componentJsonUrl);
-        component.load();
-        component.display("Default");
-    });
+    $.when(components.componentsLoaded)
+     .then(function() {
+	    $('#search input[type=text]').autocomplete({
+	        dataSource: components.components,
+	        minimumCharacters: 0,
+	        resultsDestination: "#component-list",
+	        doInitialRetrieve: true,
+	        itemValue: function(item) {
+	            return item.name;
+	        },
+	        itemDisplay: function(item) {
+	            return item.name;
+	        },
+	        filter: function(value, query) {
+	            return value.toLowerCase().indexOf(query.toLowerCase()) > -1;
+	        }
+	    }).bind("autocomplete:item:selected", function(e, item) {
+	        var component = new Component(item.url);
+	        component.load();
+	        component.display("Default");
+	    }).focus(); 
+     });
     
 })(jQuery, Mustache, ComponentList);

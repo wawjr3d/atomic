@@ -36,7 +36,7 @@ ComponentList.prototype = {
     load: function() {
         this.loadComponents();
         this.loadTemplate();
-        this.render();
+        //this.render();
     },
     
     filter: function(letters) {
