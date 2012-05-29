@@ -1,4 +1,6 @@
 {
+	"name": "Lead Item",
+	"author": "Wayne Wonder",
 	"css": [
 		"css/leadItem.css"
 	],

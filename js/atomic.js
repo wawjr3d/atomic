@@ -1,7 +1,11 @@
 (function($, Mustache, ComponentList, undefined) {
 	
 	var cssId = 1,
-		$componentStage = $("#component-view");
+		$componentStage = $("#component-view"),
+		$componentStates = $("#states"),
+		$componentDetails = $("#component-details"),
+		$componentTitle = $componentDetails.find("h1"),
+		$componentAuthor = $componentDetails.find(".author");
 	
 	var Component = function(propsFile) {
 		this.propsFile = propsFile;
@@ -14,6 +18,7 @@
 		
 		this.templatesLoaded = $.Deferred();
 		this.dataLoaded = $.Deferred();
+		this.propsLoaded = $.Deferred();
 	}
 	
 	Component.prototype = {
@@ -30,6 +35,7 @@
 			var templates = [];
 			
 			for(templateId in this.props.templates) {
+				if (!this.props.templates.hasOwnProperty(templateId)) { continue; }
 				templates.push(this.loadTemplateFile(templateId));
 			}
 			
@@ -50,6 +56,7 @@
 			var datas = [];
 			
 			for(templateId in this.props.templates) {
+				if (!this.props.templates.hasOwnProperty(templateId)) { continue; }
 				datas.push(this.loadDataFile(templateId));
 			}
 			
@@ -79,6 +86,7 @@
 		loadProps: function() {
 			return this.props || $.get(this.propsFile, $.proxy(function(props) {
 				this.props = props;
+				this.propsLoaded.resolve();
 			}, this), "json");
 		},
 			
@@ -90,13 +98,38 @@
 	    	}, this));	
 		},
 		
-		display: function(templateId) {
+		displayTemplate: function(templateId) {
 			$.when(this.templatesLoaded, this.dataLoaded).then($.proxy(function() {
 				var template = this.templates[templateId],
 					data = this.data[templateId];
 				
 				$componentStage.html(Mustache.to_html(template, data));
 			}, this));
+		},
+		
+		displayDetails: function() {
+			$.when(this.propsLoaded).then($.proxy(function() {
+            	$componentTitle.html(this.props.name);
+            	$componentAuthor.html(this.props.author);
+			}, this));
+			
+        	$.when(this.templatesLoaded).then($.proxy(function() {
+    			var $templateList = $("<ul/>");
+    			
+	        	for (var templateId in this.templates) {
+	        		if (!this.templates.hasOwnProperty(templateId)) { continue; }
+	        		
+	        		var $li = $("<li/>").html(templateId).click((function(tid, component) {
+	        			return function(e) {
+		        			component.displayTemplate(tid);
+		        		}
+	        		})(templateId, this));
+	        		
+	        		$templateList.append($li);
+	        	}
+	        	
+	            $componentStates.find("ul").replaceWith($templateList);	
+        	}, this));	
 		},
 		
 		destroy: function() {
@@ -107,13 +140,8 @@
     
     var component = new Component("components/searchResult/component.json");
     component.load();
-    component.display("Default");
-    
-    $("#states ul a").click(function(e) {
-    	e.preventDefault();
-    	
-    	component.display($(this).attr("data-template-id"));
-    });
+    component.displayDetails();
+    component.displayTemplate("Default");
 
     
     var components = new ComponentList("resources/components.json");
@@ -155,7 +183,8 @@
 	    }).bind("autocomplete:item:selected", function(e, item) {
 	        var component = new Component(item.url);
 	        component.load();
-	        component.display("Default");
+	        component.displayDetails();
+	        component.displayTemplate("Default");
 	    }).focus(); 
      });
     

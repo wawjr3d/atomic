@@ -1,4 +1,6 @@
 {
+	"name": "Search Result",
+	"author": "Little Jenny Gergen",
 	"css": [
 		"css/search_result.css",
 		"css/test.css",
