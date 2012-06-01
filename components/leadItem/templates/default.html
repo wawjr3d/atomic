@@ -1,44 +1,32 @@
-<div class="lead-summary">
-    <div class="lead-left">
-        <p>
-            <a class="lead-title" href="#leads/{{id}}/activities">
-                {{title}}
-            </a>
-        </p>
-        <p class="lead-detail">
-            <span class="lead-company">
-                {{company}}
-            </span>
-            <span class="lead-location">
-                - {{location}}
-            </span>
-            <a class="external-link" href="{{url}}">
-                <i class="icons-sprite icons-external-link"></i>
-               <span>View Job Post</span>
-            </a>
-        </p>
-    </div>
-    <div class="lead-right">
-        <div class="lead-update-detail">
-            <span class="update-time">
-                {{updateTime}}
-            </span>
-            <span class="status-label">
-                {{statusDisplay}}
-            </span>
+<ul id = "lead-list">
+<li>
+    <div class="lead-summary">
+        <div class="lead-left">
+            <p>
+                <a class="lead-title" href="#leads/{{id}}/activities"> {{title}} </a>
+            </p>
+            <p class="lead-detail">
+                <span class="lead-company"> {{company}} </span>
+                <span class="lead-location"> - {{location}} </span>
+                <a class="external-link" href="{{url}}"> <i class="icons-sprite icons-external-link"></i> <span>View Job Post</span> </a>
+            </p>
         </div>
-    </div>
-
-    <div class="open-add-activity">
-        <div class="wrapper">      
-            <i class="icons-sprite icons-add-activity-mobile"></i>
-            <a>Update</a>
+        <div class="lead-right">
+            <div class="lead-update-detail">
+                <span class="update-time"> {{updateTime}} </span>
+                <span class="status-label"> {{statusDisplay}} </span>
+            </div>
         </div>
+        <div class="open-add-activity">
+            <div class="wrapper">
+                <i class="icons-sprite icons-add-activity-mobile"></i>
+                <a>Update</a>
+            </div>
+        </div>
+        <div class="open-add-activity mobile">
+            <i class="icons-add-activity-mobile"></i>
+        </div>
+        <div class="add-activity-container"></div>
     </div>
-    <div class="open-add-activity mobile">
-        <i class="icons-add-activity-mobile"></i>
-    </div>
-
-    <div class="add-activity-container">
-    </div>
-</div>
+</li>
+</ul>

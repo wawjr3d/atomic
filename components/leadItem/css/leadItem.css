@@ -1,37 +1,18 @@
-@font-face {
-  font-family: "GandhiSans";
-  src: url(/fonts/GandhiSans-Regular-webfont.eot);
-  src: url(/fonts/GandhiSans-Regular-webfont.eot?#iefix) format('eot'), url(/fonts/GandhiSans-Regular-webfont.ttf) format('truetype'), url(/fonts/GandhiSans-Regular-webfont.woff) format('woff'), url(/fonts/GandhiSans-Regular-webfont.otf) format('opentype');
-  font-weight: normal;
-  font-style: normal;
+
+
+.icons-add-activity-mobile {
+  background: url('../images/add-activity-mobile.png') no-repeat;
+  height: 32px;
+  width: 32px;
 }
 
-a {
-  text-decoration: none;
-  color: #438bca;
+.icons-external-link {
+  background: url('../images/external-link.png') no-repeat;
+  height: 17px;
+  width: 17px;
 }
 
-a:hover {
-  color: #6ba4d5;
-  text-decoration: underline;
-}
-
-.lead-title {
-  font-family: "GandhiSans", Calibri, Verdana, sans-serif;
-  color: #438bca;
-  font-size: 1.4em;
-  font-weight: normal;
-  font-style: normal;
-}
-
-.subtext {
-  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
-  color: inherit;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 0.75em;
-}
-
+/* line 6, /opt/aptana/signature/src/main/webapp/sass/partials/_patterns.scss */
 .status-label {
   font-family: "GandhiSans", Calibri, Verdana, sans-serif;
   color: #438bca;
@@ -56,3 +37,459 @@ a:hover {
   color: #669DD5;
 }
 
+
+/* line 15, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+a {
+  text-decoration: none;
+  color: #438bca;
+  text-decoration: none;
+}
+/* line 4, /opt/aptana/signature/target/rubygems/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+a:hover, #lead-list li a.lead-summary.active {
+  text-decoration: underline;
+}
+
+/* line 21, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+a:visited {
+  color: #255782;
+}
+
+/* line 25, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+a:hover, #lead-list li a.lead-summary.active {
+  color: #6ba4d5;
+}
+
+/* line 29, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 33, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+p {
+  margin: .5em 0;
+}
+
+/* line 37, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 41, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 45, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+h1 {
+  margin: 0;
+}
+
+/* line 51, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+.page-title {
+  font-family: "DroidSerif", Georgia, serif;
+  color: #0a2f5a;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2.25em;
+}
+@media all and (max-width: 37em) {
+  /* line 51, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+  .page-title {
+    font-family: "DroidSerif", Georgia, serif;
+    color: #0a2f5a;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5em;
+  }
+}
+
+/* line 58, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+.section-title {
+  font-family: "GandhiSans", Calibri, Verdana, sans-serif;
+  color: #0a2f5a;
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 62, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+.lead-title {
+  font-family: "GandhiSans", Calibri, Verdana, sans-serif;
+  color: #438bca;
+  font-size: 1.4em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 66, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+.activity-type, #lead-list li .external-link {
+  font-family: "GandhiSans", Calibri, Verdana, sans-serif;
+  color: #6d9f18;
+  font-size: 0.75em;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+
+/* line 72, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+.subtext, #lead-list li .open-add-activity a, #lead-list li .update-time {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: inherit;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.75em;
+}
+
+/* line 82, /opt/aptana/signature/src/main/webapp/sass/global.scss */
+.icons-sprite, .icons-activity-added, .icons-activity-application, .icons-activity-archive-small, .icons-activity-archive, .icons-activity-discussion, .icons-activity-fitted, .icons-activity-follow-up, .icons-activity-info-meeting, .icons-activity-interview, .icons-activity-job-offer, .icons-activity-network-contact, .icons-activity-note, .icons-activity-phone-screen, .icons-activity-recruiter-contact, .icons-activity-upcoming-small, .icons-add-activity-mobile, .icons-add-activity, .icons-compliance-bad, .icons-compliance-good, .icons-compliance-notification-close, .icons-down-arrow, .icons-edit-activity, .icons-external-link, .icons-fitness-check, .icons-form-calendar, .icons-form-close, .icons-form-notch-activity, .icons-form-notch-lead, .icons-inactive-small, .icons-nav-notch, .icons-new-lead-badge, .icons-new-lead, .icons-sidebar-icon {
+  display: block;
+}
+
+/* line 6, ../sass/leadItem.scss */
+.open-add-activity {
+  color: #438BCA;
+  font-size: .9em;
+}
+/* line 10, ../sass/leadItem.scss */
+.open-add-activity .icons-add-activity-mobile {
+  display: block;
+  height: 32px;
+  margin: 0 auto 7px auto;
+  width: 32px;
+}
+
+/* line 18, ../sass/leadItem.scss */
+#lead-list li {
+  border-top: 1px solid #e1e1e1;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+/* line 24, ../sass/leadItem.scss */
+#lead-list li.open {
+  background-color: #fefbd8;
+}
+/* line 27, ../sass/leadItem.scss */
+#lead-list li.open .lead-summary {
+  margin: 0 0 0 3360px;
+}
+/* line 31, ../sass/leadItem.scss */
+#lead-list li.open .lead-fitness {
+  border-left-width: 1.18em;
+  margin-left: .7em;
+}
+/* line 37, ../sass/leadItem.scss */
+#lead-list li .lead-summary {
+  background-color: white;
+  color: #333333;
+  overflow: hidden;
+  padding: 1.3em 0;
+  position: relative;
+  margin: 0;
+  z-index: 2;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s false;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 50, ../sass/leadItem.scss */
+#lead-list li .lead-summary p {
+  margin: .2em 0;
+}
+@media all and (min-width: 37em) {
+  /* line 54, ../sass/leadItem.scss */
+  #lead-list li .lead-summary:hover, #lead-list li .lead-summary.active {
+    background-color: #fefbd8;
+  }
+  /* line 58, ../sass/leadItem.scss */
+  #lead-list li .lead-summary:hover .open-add-activity, #lead-list li .lead-summary.active .open-add-activity {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* line 63, ../sass/leadItem.scss */
+  #lead-list li .lead-summary:hover .external-link, #lead-list li .lead-summary.active .external-link {
+    display: inline-block;
+    text-decoration: none;
+  }
+  /* line 66, ../sass/leadItem.scss */
+  #lead-list li .lead-summary:hover .external-link:hover, #lead-list li .lead-summary.active .external-link:hover, #lead-list li .lead-summary:hover .external-link.lead-summary.active, #lead-list li .lead-summary.active .external-link.lead-summary.active {
+    color: #80bb1c;
+  }
+}
+/* line 73, ../sass/leadItem.scss */
+#lead-list li .lead-summary.active {
+  background-color: white;
+}
+@media all and (max-width: 37em) {
+  /* line 37, ../sass/leadItem.scss */
+  #lead-list li .lead-summary {
+    width: 100%;
+    margin: 0%;
+  }
+}
+/* line 84, ../sass/leadItem.scss */
+#lead-list li .lead-left {
+  float: left;
+  width: 70%;
+  text-align: left;
+  margin-left: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 92, ../sass/leadItem.scss */
+#lead-list li .lead-right {
+  float: right;
+  position: absolute;
+  right: 20px;
+  text-align: right;
+  width: 30%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media all and (max-width: 37em) {
+  /* line 92, ../sass/leadItem.scss */
+  #lead-list li .lead-right {
+    float: none;
+    width: auto;
+    text-align: left;
+    position: static;
+    margin: 1.25em;
+  }
+}
+/* line 108, ../sass/leadItem.scss */
+#lead-list li .lead-update-detail {
+  float: right;
+}
+@media all and (max-width: 37em) {
+  /* line 108, ../sass/leadItem.scss */
+  #lead-list li .lead-update-detail {
+    width: 100%;
+  }
+}
+/* line 116, ../sass/leadItem.scss */
+#lead-list li .lead-company {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: inherit;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+}
+/* line 120, ../sass/leadItem.scss */
+#lead-list li .lead-location {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #959595;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+}
+/* line 124, ../sass/leadItem.scss */
+#lead-list li .lead-detail {
+  font-size: .9em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.5em;
+}
+/* line 132, ../sass/leadItem.scss */
+#lead-list li .external-link {
+  display: none;
+  position: relative;
+  top: -13px;
+  left: 1.75em;
+}
+/* line 138, ../sass/leadItem.scss */
+#lead-list li .external-link i {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+/* line 143, ../sass/leadItem.scss */
+#lead-list li .external-link span {
+  position: absolute;
+  left: 27px;
+  top: 0px;
+}
+/* line 150, ../sass/leadItem.scss */
+#lead-list li .wrapper {
+  position: absolute;
+  top: 0;
+  margin: 1em 0.8em;
+}
+/* line 155, ../sass/leadItem.scss */
+#lead-list li .open-add-activity {
+  background: rgba(254, 251, 216, 0.4);
+  height: 100%;
+  opacity: .01;
+  position: absolute;
+  right: -65px;
+  text-align: center;
+  top: 0px;
+  width: 64px;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s false;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 2px 1px 5px 0px, rgba(0, 0, 0, 0.1) 6px 0px 5px -5px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 2px 1px 5px 0px, rgba(0, 0, 0, 0.1) 6px 0px 5px -5px inset;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 1px 5px 0px, rgba(0, 0, 0, 0.1) 6px 0px 5px -5px inset;
+}
+/* line 167, ../sass/leadItem.scss */
+#lead-list li .open-add-activity:hover, #lead-list li .open-add-activity.lead-summary.active {
+  opacity: 1;
+}
+/* line 171, ../sass/leadItem.scss */
+#lead-list li .open-add-activity a {
+  clear: both;
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+@media all and (max-width: 37em) {
+  /* line 155, ../sass/leadItem.scss */
+  #lead-list li .open-add-activity {
+    display: none;
+    background: none;
+    box-shadow: none;
+  }
+}
+/* line 187, ../sass/leadItem.scss */
+#lead-list li .open-add-activity.mobile {
+  display: none;
+}
+@media all and (max-width: 37em) {
+  /* line 187, ../sass/leadItem.scss */
+  #lead-list li .open-add-activity.mobile {
+    display: block;
+    float: right;
+    right: 5%;
+    opacity: 1;
+    position: absolute;
+    top: 1em;
+    visibility: visible;
+    width: auto;
+    box-shadow: none;
+    height: auto;
+  }
+}
+/* line 203, ../sass/leadItem.scss */
+#lead-list li .lead-fitness {
+  background-color: white;
+  border-left: .7em #CCCCCC solid;
+  height: 4.3em;
+  left: 0;
+  margin: 1.2em;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 0;
+  z-index: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s false;
+}
+/* line 217, ../sass/leadItem.scss */
+#lead-list li .lead-fitness:hover, #lead-list li .lead-fitness.lead-summary.active {
+  cursor: pointer;
+}
+/* line 222, ../sass/leadItem.scss */
+#lead-list li .update-time {
+  display: block;
+  margin: 0 0 5px 0;
+}
+@media all and (max-width: 37em) {
+  /* line 222, ../sass/leadItem.scss */
+  #lead-list li .update-time {
+    display: inline;
+    float: right;
+  }
+}
+
+/* line 235, ../sass/leadItem.scss */
+.lt-ie9 .lead-summary:hover, .lt-ie9 #lead-list li .lead-summary.active, #lead-list li .lt-ie9 .lead-summary.active {
+  background-color: #fefbd8;
+}
+/* line 237, ../sass/leadItem.scss */
+.lt-ie9 .lead-summary:hover .open-add-activity, .lt-ie9 #lead-list li .lead-summary.active .open-add-activity, #lead-list li .lt-ie9 .lead-summary.active .open-add-activity {
+  width: auto;
+  opacity: 1;
+  visibility: visible;
+  margin: 5% 5% 5% 7%;
+  background-color: #276791;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF276791', endColorstr='#FF15405C');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQyN2VhZSIvPjxzdG9wIG9mZnNldD0iMjAlIiBzdG9wLWNvbG9yPSIjNjY5ZGQ1Ii8+PHN0b3Agb2Zmc2V0PSI4MCUiIHN0b3AtY29sb3I9IiM0MjdlYWUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyNzY3OTEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #427eae), color-stop(20%, #669dd5), color-stop(80%, #427eae), color-stop(100%, #276791));
+  background-image: -webkit-linear-gradient(top, #427eae 0%, #669dd5 20%, #427eae 80%, #276791 100%);
+  background-image: -moz-linear-gradient(top, #427eae 0%, #669dd5 20%, #427eae 80%, #276791 100%);
+  background-image: -o-linear-gradient(top, #427eae 0%, #669dd5 20%, #427eae 80%, #276791 100%);
+  background-image: -ms-linear-gradient(top, #427eae 0%, #669dd5 20%, #427eae 80%, #276791 100%);
+  background-image: linear-gradient(top, #427eae 0%, #669dd5 20%, #427eae 80%, #276791 100%);
+  -webkit-box-shadow: 0 0 0 2px rgba(14, 62, 93, 0.4);
+  -moz-box-shadow: 0 0 0 2px rgba(14, 62, 93, 0.4);
+  box-shadow: 0 0 0 2px rgba(14, 62, 93, 0.4);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+  font-size: inherit;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+/* line 70, /opt/aptana/signature/src/main/webapp/sass/partials/_buttons.scss */
+.lt-ie9 .lead-summary:hover .open-add-activity:hover, .lt-ie9 #lead-list li .lead-summary.active .open-add-activity:hover, #lead-list li .lt-ie9 .lead-summary.active .open-add-activity:hover, .lt-ie9 .lead-summary:hover #lead-list li .open-add-activity.lead-summary.active, #lead-list li .lt-ie9 .lead-summary:hover .open-add-activity.lead-summary.active, .lt-ie9 #lead-list li .lead-summary.active .open-add-activity.lead-summary.active, #lead-list li .lt-ie9 .lead-summary.active .open-add-activity.lead-summary.active {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF18577D', endColorstr='#FF276791');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRjODdiOSIvPjxzdG9wIG9mZnNldD0iMjAlIiBzdG9wLWNvbG9yPSIjN2ViMWU0Ii8+PHN0b3Agb2Zmc2V0PSI4MCUiIHN0b3AtY29sb3I9IiM0Yzg3YjkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0MjdlYWUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4c87b9), color-stop(20%, #7eb1e4), color-stop(80%, #4c87b9), color-stop(100%, #427eae));
+  background-image: -webkit-linear-gradient(top, #4c87b9 0%, #7eb1e4 20%, #4c87b9 80%, #427eae 100%);
+  background-image: -moz-linear-gradient(top, #4c87b9 0%, #7eb1e4 20%, #4c87b9 80%, #427eae 100%);
+  background-image: -o-linear-gradient(top, #4c87b9 0%, #7eb1e4 20%, #4c87b9 80%, #427eae 100%);
+  background-image: -ms-linear-gradient(top, #4c87b9 0%, #7eb1e4 20%, #4c87b9 80%, #427eae 100%);
+  background-image: linear-gradient(top, #4c87b9 0%, #7eb1e4 20%, #4c87b9 80%, #427eae 100%);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 76, /opt/aptana/signature/src/main/webapp/sass/partials/_buttons.scss */
+.lt-ie9 .lead-summary:hover .open-add-activity:active, .lt-ie9 #lead-list li .lead-summary.active .open-add-activity:active, #lead-list li .lt-ie9 .lead-summary.active .open-add-activity:active {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF103F5D', endColorstr='#FF427EAE');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3Njc5MSIvPjxzdG9wIG9mZnNldD0iNTklIiBzdG9wLWNvbG9yPSIjNDI3ZWFlIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMzM3MTlkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #276791), color-stop(59%, #427eae), color-stop(100%, #33719d));
+  background-image: -webkit-linear-gradient(top, #276791 0%, #427eae 59%, #33719d 100%);
+  background-image: -moz-linear-gradient(top, #276791 0%, #427eae 59%, #33719d 100%);
+  background-image: -o-linear-gradient(top, #276791 0%, #427eae 59%, #33719d 100%);
+  background-image: -ms-linear-gradient(top, #276791 0%, #427eae 59%, #33719d 100%);
+  background-image: linear-gradient(top, #276791 0%, #427eae 59%, #33719d 100%);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 245, ../sass/leadItem.scss */
+.lt-ie9 .lead-summary:hover .external-link, .lt-ie9 #lead-list li .lead-summary.active .external-link, #lead-list li .lt-ie9 .lead-summary.active .external-link {
+  display: inline;
+}

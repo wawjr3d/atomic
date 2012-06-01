@@ -2,6 +2,7 @@
 	"name": "Lead Item",
 	"author": "Wayne Wonder",
 	"css": [
+	    "../shared-css/global.css",
 		"css/leadItem.css"
 	],
 	"templates": {
