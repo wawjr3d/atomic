@@ -3,3 +3,4 @@
 *.project
 .sass-cache/
 css/*
+target/*

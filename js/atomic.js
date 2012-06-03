@@ -5,7 +5,8 @@
 		$componentStates = $("#states"),
 		$componentDetails = $("#component-details"),
 		$componentTitle = $componentDetails.find("h1"),
-		$componentAuthor = $componentDetails.find(".author");
+		$componentAuthor = $componentDetails.find(".author"),
+		$componentData = $("#data");
 	
 	var Component = function(propsFile) {
 		this.propsFile = propsFile;
@@ -129,7 +130,13 @@
 	        	}
 	        	
 	            $componentStates.find("ul").replaceWith($templateList);	
-        	}, this));	
+        	}, this));
+        	
+        	$.when(this.dataLoaded).then($.proxy(function() {
+        		
+        		$componentData.find("form").replaceWith(json2form(this.data["Default"]));
+        		
+        	}, this));
 		},
 		
 		destroy: function() {
@@ -146,7 +153,6 @@
     
     var components = new ComponentList("resources/components.json");
     components.load();
-    
 
     var delay = (function() {
         var timer = 0;
@@ -155,14 +161,6 @@
             timer = setTimeout(callback, ms);
         };
     })();
-    
-    // TODO: move this into ComponentList
-//    $('#search input[type=text]').keyup(function(){
-//        var searchText = $(this).val();
-//        delay(function() {
-//            components.filter(searchText);
-//        }, 200);
-//    });
     
     $.when(components.componentsLoaded)
      .then(function() {

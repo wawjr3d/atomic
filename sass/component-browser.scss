@@ -4,6 +4,7 @@
 @import "compass/css3/box-sizing";
 @import "compass/css3/border-radius";
 @import "compass/css3/font-face";
+@import "compass/css3/columns";
 
 @import "partials/patterns/colors";
 @import "partials/patterns/fonts";
@@ -208,8 +209,22 @@ body{
 #data {
 	margin: 20px 20px 20px 0;
 	padding-right: 20px;
+	
+	form {
+		@include column-count(2);
+		@include column-gap(1em);
+	}
+	
+	form label {
+		display: block;
+		text-transform: capitalize;
+		margin: 1em 0;
+	}
+	
+	form input {
+		margin: 0 .3em;
+	}
 }
-
 
 #component-view{
 	clear: both;
