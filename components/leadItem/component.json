@@ -1,6 +1,6 @@
 {
 	"name": "Lead Item",
-	"author": "Wayne Wonder",
+	"author": "The Stratedist",
 	"css": [
 	    "../shared-css/global.css",
 		"css/leadItem.css"
