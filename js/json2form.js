@@ -24,7 +24,7 @@
 				
 				$input = $(["<label>",
 				            	label,
-				            	"<input type='" + inputType + "' name='" + prop + "' />",
+				            	"<input type='" + inputType + "' name='" + prop + "' value='" + value + "' />",
 				            	labelSecond,
 				            "</label>"].join(""));
 				

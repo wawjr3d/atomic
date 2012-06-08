@@ -9,6 +9,7 @@
 		$componentAuthor = $componentDetails.find(".author"),
 		$componentData = $("#data");
 	
+	// TODO: make this an object and pull out code that shouldnt be a part of the object
 	var Component = function(propsFile) {
 		this.propsFile = propsFile;
 		this.path = propsFile.substring(0, propsFile.lastIndexOf("/"));
