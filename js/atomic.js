@@ -1,7 +1,8 @@
 (function($, Mustache, ComponentList, undefined) {
 	
-	var cssId = 1,
-		$componentStage = $("#component-view"),
+	var $componentView = $("#component-view"),
+		$componentStage = $componentView.children(".component"),
+		$componentStyles = $componentView.children("style"),
 		$componentStates = $("#states"),
 		$componentDetails = $("#component-details"),
 		$componentTitle = $componentDetails.find("h1"),
@@ -15,7 +16,6 @@
 		// TODO: cache by file name to prevent loading files more than once
 		this.templates = {};
 		this.data = {};
-		this.cssIds = [];
 		
 		this.templatesLoaded = $.Deferred();
 		this.dataLoaded = $.Deferred();
@@ -66,22 +66,17 @@
 			}, this));			
 		},
 		
-		loadCss: function(cssFile) {
-			var cssFileId = cssId++;
-			$("head").append("<link data-component-id='" + cssFileId + "' href='" + cssFile + "' rel='stylesheet' type='text/css' />");
-			
-			this.cssIds.push(cssFileId);
-		},
-		
 		loadAllCss: function() {
 			var cssFiles = this.props.css;
-			for (var i = 0; this.loadCss(this.path + "/" + cssFiles[i]) || i < cssFiles.length - 1; i++);
+			var cssPaths = $.map(cssFiles, $.proxy(function(cssFile) {
+			    return "@import '" + this.path + "/" + cssFile + "';";
+			}, this));
+			
+			$componentStyles.append(cssPaths.join("\n"));
 		},
 		
 		unloadAllCss: function() {
-			for (var i = 0; i < this.cssIds.length; i++) {
-				$("head link[data-component-id='" + this.cssIds[i] + "']").remove();
-			}
+		    $componentStyles.empty();
 		},
 		
 		loadProps: function() {
@@ -143,7 +138,6 @@
 			this.unloadAllCss();
 		}
 	};
-
     
     var component = new Component("components/searchResult/component.json");
     component.load();
@@ -153,14 +147,6 @@
     
     var components = new ComponentList("resources/components.json");
     components.load();
-
-    var delay = (function() {
-        var timer = 0;
-        return function(callback, ms) {
-            clearTimeout(timer);
-            timer = setTimeout(callback, ms);
-        };
-    })();
     
     $.when(components.componentsLoaded)
      .then(function() {
