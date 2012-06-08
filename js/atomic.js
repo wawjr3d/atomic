@@ -7,7 +7,9 @@
 		$componentDetails = $("#component-details"),
 		$componentTitle = $componentDetails.find("h1"),
 		$componentAuthor = $componentDetails.find(".author"),
-		$componentData = $("#data");
+		$componentData = $("#data")
+		
+		loadedComponents = {};
 	
 	// TODO: make this an object and pull out code that shouldnt be a part of the object
 	var Component = function(propsFile) {
@@ -140,11 +142,18 @@
 		}
 	};
     
-    var component = new Component("components/searchResult/component.json");
-    component.load();
-    component.displayDetails();
-    component.displayTemplate("Default");
+	function loadComponent(url) {
+	    var component = loadedComponents[url];
+	    if (!loadedComponents[url]) {
+	        loadedComponents[url] = component = new Component(url);
+	    }
 
+	    component.load();
+	    component.displayDetails();
+	    component.displayTemplate("Default");
+	}
+
+	loadComponent("components/searchResult/component.json");
     
     var components = new ComponentList("resources/components.json");
     components.load();
@@ -166,10 +175,7 @@
 	            return value.toLowerCase().indexOf(query.toLowerCase()) > -1;
 	        }
 	    }).bind("autocomplete:item:selected", function(e, item) {
-	        var component = new Component(item.url);
-	        component.load();
-	        component.displayDetails();
-	        component.displayTemplate("Default");
+	        loadComponent(item.url);
 	    }).focus(); 
      });
     
