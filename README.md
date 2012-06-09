@@ -1,6 +1,5 @@
 #atomic
 
-
 ##What is a Component?
 A directory containing the following directories
 - css
@@ -31,3 +30,9 @@ Sample data that the component will render
 One for component code
 
 One for component assets
+
+
+#Build Dependencies
+- compass
+- sass
+- maven
