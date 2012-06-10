@@ -1,0 +1,11 @@
+task :default => 'get_deps'
+
+task :get_deps do
+    puts "Fetching dependencies"
+    system('bundle')
+end
+
+task :server do
+    puts "Running debug server at 127.0.0.1:8084..."
+    system('ruby -rubygems debug-server.rb')
+end
