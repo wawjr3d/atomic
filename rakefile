@@ -1,9 +1,4 @@
-task :default => 'get_deps'
-
-task :get_deps do
-    puts "Fetching dependencies"
-    system('bundle')
-end
+task :default => 'server'
 
 task :server do
     puts "Running debug server at 127.0.0.1:8084..."

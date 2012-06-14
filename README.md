@@ -32,9 +32,9 @@ One for component code
 One for component assets
 
 
-#How to build
-After cloning, be sure to run `bundle` in order to fetch the gems laid out in the Gemfile. This project depends on `sass`, `saas`, and `sinatra`.
+#Developement
+After cloning, be sure to run `bundle install` in order to fetch the gems laid out in the Gemfile. This project depends on `sass`, `compass`, and `sinatra`.
 
 There is currently a single rake target to run Sinatra:
     rake server
-will run sinatra from `debug-server.rb`.
+will run sinatra using `debug-server.rb`.
