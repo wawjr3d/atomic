@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Component &amp; Pattern Browser</title>
-	<link rel="stylesheet" type="text/css" href="css/component-browser.css" media="screen, projection">
+<meta charset="utf-8" />
+<title>Component &amp; Pattern Browser</title>
+<link rel="stylesheet" type="text/css" href="css/component-browser.css"
+	media="screen, projection">
 </head>
 
 <body>
 	<div id="nav-panel">
-			<div id="finder-panel">
-				<div id="finder">
-					<ul>
-						<li class="active"><a href="#">Components</a></li>
-						<li><a href="#">Patterns</a></li>
-					</ul>
-				</div>
-				<div id="search">
-					<div class="faux-search-box">
-					  <form action="?" method="get">
-					    <input type="text">
-					    <input type="submit" value="Search Icon">
-					  </form>
-					</div>
+		<div id="finder-panel">
+			<div id="finder">
+				<ul class="tabs">
+					<li class="active"><a href="#">Components</a></li>
+					<li><a href="#">Patterns</a></li>
+				</ul>
+			</div>
+			<div id="search">
+				<div class="faux-search-box">
+					<form action="?" method="get">
+						<input type="text"> <input type="submit"
+							value="Search Icon">
+					</form>
 				</div>
 			</div>
-			
-			<div id="component-list">
-			</div>
+		</div>
+		<div class="panes">
+			<div id="component-list"></div>
+			<div id="pattern-list"></div>
+		</div>
 	</div>
-	
+
 	<div id="component-panel">
-		
+
 		<section>
 			<div id="component-details">
-				<a href="#" class="assets-link">Assets<img src="img/external-icon.png" width="13" height="12" alt="External Icon"></a>
+				<a href="#" class="assets-link">Assets<img
+					src="img/external-icon.png" width="13" height="12"
+					alt="External Icon"></a>
 				<h1>Search Result</h1>
-				<p> Added to the library on <time datetime=""> Mar 10 2012 </time> by <a href="#" class="author">Buster</a></p>
-				
+				<p>
+					Added to the library on
+					<time datetime=""> Mar 10 2012 </time>
+					by <a href="#" class="author">Buster</a>
+				</p>
+
 				<div id="states">
 					<h2>States</h2>
 					<ul></ul>
 				</div>
-				
+
 				<div id="data">
 					<h2>Data</h2>
 					<form action="#" method="post">
-            <label for="name">Title:</label>
-            <input type="text" name="name" id="name" value="">
-			         	
-					 	<label for="date">Date:</label>
-            <input type="text" name="date" id="date" value="">
-			         	
-					 	<label for="description">Description:</label>
-            <input type="text" name="description" id="description" value="">
-			         	
-					 	<input type="checkbox" name="checkbox" id="checkbox">
-						<label for="checkbox">Saved</label>
-						
-						<input type="submit" value="Submit" />
+						<label for="name">Title:</label> <input type="text" name="name"
+							id="name" value=""> <label for="date">Date:</label> <input
+							type="text" name="date" id="date" value=""> <label
+							for="description">Description:</label> <input type="text"
+							name="description" id="description" value=""> <input
+							type="checkbox" name="checkbox" id="checkbox"> <label
+							for="checkbox">Saved</label> <input type="submit" value="Submit" />
 					</form>
 				</div>
 			</div>
 		</section>
-		
+
 		<div id="component-view">
-		  <style type="text/css" scoped="scoped"></style>
-		  <div class="component"></div>
+			<style type="text/css" scoped="scoped"></style>
+			<div class="component"></div>
 		</div>
 	</div>
 
-  <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
-  <script type="text/javascript" src="js/jquery.autocomplete.js"></script>
-  <script type="text/javascript" src="js/mustache.js"></script>
-  <script type="text/javascript" src="js/underscore.js"></script>
-  <script type="text/javascript" src="js/json2form.js"></script>
-  <script type="text/javascript" src="js/components.js"></script>
-  <script type="text/javascript" src="js/atomic.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="js/jquery.tools-1.2.7.js"></script>
+	<script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+	<script type="text/javascript" src="js/mustache.js"></script>
+	<script type="text/javascript" src="js/underscore.js"></script>
+	<script type="text/javascript" src="js/json2form.js"></script>
+	<script type="text/javascript" src="js/patterns.js"></script>
+	<script type="text/javascript" src="js/components.js"></script>
+	<script type="text/javascript" src="js/atomic.js"></script>
 </body>
 </html>

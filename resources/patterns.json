@@ -1,0 +1,9 @@
+{
+	"patterns": [
+		{
+			"id": 1,
+			"name": "Buttons",
+			"url": "patterns/button/button.json"
+		}
+	]
+}
