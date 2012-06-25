@@ -1,6 +1,5 @@
 #atomic
 
-
 ##What is a Component?
 A directory containing the following directories
 - css
@@ -26,8 +25,8 @@ Sample data that the component will render
 
 
 ##Where do components live?
-**In your project's repos**
+**in your project's repos**
 
-One for component code
+one for component code
 
-One for component assets
+one for component assets

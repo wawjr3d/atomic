@@ -1,1 +1,40 @@
-$link-color: #2370a9;
+
+
+// Colors -------------------------------------------------
+
+$primary-color            : #333333;
+$secondary-color          : #969696;
+$link-color               : #2370a9;
+
+$primary-gradient-light   : #79b6dc;
+$primary-gradient-dark    : #5ea7d5;
+$secondary-gradient-light : #969696;
+$secondary-gradient-dark  : #666666;
+
+
+
+// Gradients -------------------------------------------------
+
+@mixin gradient-primary{
+	background-color: $primary-gradient-light; // Old browsers
+    @include filter-gradient($primary-gradient-light, $primary-gradient-dark, vertical); // IE6-9
+    @include background-image(linear-gradient(top, $primary-gradient-light 0%, $primary-gradient-dark 100%)); 
+}
+
+@mixin gradient-primary-hover{
+	background-color: transparentize($primary-gradient-light, 0.8); // Old browsers
+    @include filter-gradient(transparentize($primary-gradient-light, 0.8), transparentize($primary-gradient-dark, 0.8), vertical); // IE6-9
+    @include background-image(linear-gradient(top, transparentize($primary-gradient-light, 0.2) 0%, transparentize($primary-gradient-dark, 0.2) 100%)); 
+}
+
+@mixin gradient-secondary{
+	background-color: $secondary-gradient-light; // Old browsers
+    @include filter-gradient($secondary-gradient-light, $secondary-gradient-dark, vertical); // IE6-9
+    @include background-image(linear-gradient(top, $secondary-gradient-light 0%, $secondary-gradient-dark 100%)); 
+}
+
+@mixin gradient-secondary-hover{
+	background-color: transparentize($secondary-gradient-light, 0.8); // Old browsers
+    @include filter-gradient(transparentize($secondary-gradient-light, 0.8), transparentize($secondary-gradient-dark, 0.8), vertical); // IE6-9
+    @include background-image(linear-gradient(top, transparentize($secondary-gradient-light, 0.5) 0%, transparentize($secondary-gradient-dark, 0.5) 100%)); 
+}

@@ -13,6 +13,7 @@
                 <version>1.1</version>
                 <configuration>
                     <port>8084</port>
+                    <path>/</path>
                     <warSourceDirectory>${basedir}</warSourceDirectory>
                 </configuration>
             </plugin>
