@@ -4,3 +4,4 @@
 .sass-cache/
 css/*
 target/*
+Gemfile.lock
