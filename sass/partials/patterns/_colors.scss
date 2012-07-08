@@ -2,10 +2,15 @@
 
 // Colors -------------------------------------------------
 
-$primary-color            : #333333;
-$secondary-color          : #969696;
-$link-color               : #2370a9;
+//text
+$text-primary-color       : #333333;
+$text-secondary-color     : #666666;
+$text-link-color          : #2370a9;
+$text-reverse-color       : #FFFFFF;
+$text-error-color         : #3A4F87;
+$text-error-reverse-color : #FCBABA;
 
+//gradients
 $primary-gradient-light   : #79b6dc;
 $primary-gradient-dark    : #5ea7d5;
 $secondary-gradient-light : #969696;

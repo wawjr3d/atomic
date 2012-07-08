@@ -1,8 +1,48 @@
-$serif-font: "SignikaRegular", "Lucida Grande", Lucida Sans, Arial, serif;
+@import "compass/css3/font-face";
 
-@include font-face("SignikaRegular",
-                    font-files("Signika-Regular-webfont.woff",
-                               "Signika-Regular-webfont.ttf",
-                               "Signika-Regular-webfont.svg#SignikaRegular"),
-                    "Signika-Regular-webfont.eot",
-                    normal, normal);
+
+//--Lucida Sans--------------------------------------------------------------------
+@mixin Lucida ($color: inherit, $weight: normal, $style: normal, $size: inherit) {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+  font-size: $size;
+}
+
+//--Signika--------------------------------------------------------------------
+@include font-face("Signika", font-files("/fonts/Signika-Regular-webfont.ttf", ttf, "/fonts/Signika-Regular-webfont.woff", woff), "/fonts/Signika-Regular-webfont.eot", normal, normal);
+
+
+@mixin Signika ($color: inherit, $weight: normal, $style: normal, $size: inherit) {
+  font-family: "Signika", Calibri, Verdana, sans-serif;
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+  font-size: $size;
+}
+
+
+
+//Typography ------------------------------------------------------------------
+
+.page-title {
+  @include Signika($text-primary-color, normal, normal, 2.25em); 
+}
+
+.section-title {
+  @include Signika($text-primary-color,  normal, normal, 1em);
+}
+
+.default-text {
+  @include Lucida(inherit,  normal, normal, 0.75em);
+}
+
+.default-link {
+  @include Lucida($text-link-color,  normal, normal, 0.75em);
+}
+
+.caption {
+  @include Lucida($text-secondary-color,  normal, italic, 0.75em);
+}
+
