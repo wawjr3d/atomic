@@ -29,9 +29,9 @@ PatternsList.prototype = {
 
 	render : function() {
 		$.when(this.patternsLoaded, this.templateLoaded).then(
-				$.proxy(function() {
-					this.renderList(this.patterns);
-				}, this));
+    		$.proxy(function() {
+    			this.renderList(this.patterns);
+		}, this));
 	},
 
 	load : function() {
