@@ -9,34 +9,6 @@
 @import "partials/patterns/colors";
 @import "partials/patterns/fonts";
 
-
-/*------------------------------------*\
-  MAIN
-\*------------------------------------*/
-/* GO! */
-
-
-/* ---------- Global styles ---------- */
-
-a{
-	color: $link-color;
-	text-decoration: none;
-}
-
-a:hover{
-	text-decoration: underline;
-}
-
-body, html{
-	height: 100%;
-}
-
-body{
-	background: image-url("linen.png");
-	font-family: $serif-font;
-	color: #333;
-}
-
 /* ---------- Nav Panel styles ---------- */
 
 #nav-panel{
@@ -130,7 +102,8 @@ body{
   cursor: pointer;
 }
 
-#component-list{
+/*TODO: refactor into sidebar mixin*/
+#component-list, #pattern-list{
 	width: 100%;
 	height: 100%;
 	padding-top: 98px;
@@ -161,7 +134,7 @@ body{
 
 
 /* ---------- Component Panel styles ---------- */
-
+/*TODO: refactor into panel mixin*/
 #component-panel{
 	width:80%;
 	height: 100%;
