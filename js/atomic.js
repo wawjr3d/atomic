@@ -1,11 +1,21 @@
 (function($, Mustache, ComponentList, PatternList, undefined) {
 
-	var $componentView = $("#component-view"), $componentStage = $componentView
-			.children(".component"), $componentStyles = $componentView
-			.children("style"), $componentStates = $("#states"), $componentDetails = $("#component-details"), $componentTitle = $componentDetails
-			.find("h1"), $componentAuthor = $componentDetails.find(".author"), $componentData = $("#data")
+    String.prototype.escapeHTML = function () {                                                                                                        
+        return this.replace(/>/g,'&gt;')
+                    .replace(/</g,'&lt;')
+                    .replace(/"/g,'&quot;');
+    };
 
-	loadedComponents = {};
+	var $componentView = $("#component-view"),
+	    $componentStage = $componentView.children(".component"),
+	    $componentStyles = $componentView.children("style"),
+	    $componentStates = $("#states"),
+	    $componentDetails = $("#component-details"), 
+	    $componentTitle = $componentDetails.find("h1"),
+	    $componentAuthor = $componentDetails.find(".author"),
+	    $componentData = $("#data"),
+	    $componentHTML = $("#component-copy").find(".html pre"),
+	    loadedComponents = {};
 
 	// TODO: make this an object and pull out code that shouldnt be a part of
 	// the object
@@ -107,20 +117,20 @@
 		},
 
 		displayTemplate : function(templateId) {
-			$
-					.when(this.templatesLoaded, this.dataLoaded)
-					.then(
-							$
-									.proxy(
-											function() {
-												var template = this.templates[templateId], data = this.data[templateId];
-
-												$componentStage
-														.html(Mustache.to_html(
-																template, data));
-											}, this));
+			$.when(this.templatesLoaded, this.dataLoaded)
+			 .then($.proxy(function() {
+			     var template = this.templates[templateId],
+			         data = this.data[templateId];
+			     var html = Mustache.to_html(template, data);
+			     $componentStage.html(html);
+			     this.displayCopyHTML(html);
+			 }, this));
 		},
 
+		displayCopyHTML: function(html) {
+		    $componentHTML.html(html.escapeHTML());
+		},
+		
 		displayDetails : function() {
 			$.when(this.propsLoaded).then($.proxy(function() {
 				$componentTitle.html(this.props.name);
@@ -152,8 +162,7 @@
 			$.when(this.dataLoaded).then(
 					$.proxy(function() {
 
-						$componentData.find("form").replaceWith(
-								json2form(this.data["Default"]));
+						$componentData.find("form").replaceWith(json2form(this.data["Default"]));
 
 					}, this));
 		},
@@ -179,7 +188,10 @@
 	var components = new ComponentList("resources/components.json");
     var patterns = new PatternsList("resources/patterns.json");
 	// TODO: view events go somewhere else? -ck
-	$("ul.tabs").tabs("div.panes > div");
+	$("ul.tabs").tabs("div.panes > div", {
+		effect: "fade",
+		tabs : "li"
+	});
 
 	 components.load();
 	 patterns.load();

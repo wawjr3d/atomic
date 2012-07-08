@@ -1,0 +1,13 @@
+{
+	"name": "Add Lead",
+	"author": "The Stratedist",
+	"css": [
+		"css/buttons.css"
+	],
+	"templates": {
+		"Default": {
+			"template": "templates/default.html",
+			"data": "demo/default.json"
+		}
+	}
+}

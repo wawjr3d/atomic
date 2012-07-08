@@ -51,7 +51,7 @@
     }
 }
 
-#finder li.active{
+#finder li.current{
 	@include gradient-primary;
 
 	&:hover{

@@ -3,7 +3,7 @@
 		{
 			"id": 1,
 			"name": "Buttons",
-			"url": "patterns/button/button.json"
+			"url": "patterns/buttons/pattern.json"
 		}
 	]
 }

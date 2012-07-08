@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <title>Component &amp; Pattern Browser</title>
-<link rel="stylesheet" type="text/css" href="css/component-browser.css"
-	media="screen, projection">
+    <link rel="stylesheet" type="text/css" href="css/component-browser.css" media="screen, projection">
+    <link type="text/css" rel="stylesheet" href="syntaxHighlighter/styles/shThemeDefault.css"/>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
 		<div id="finder-panel">
 			<div id="finder">
 				<ul class="tabs">
-					<li class="active"><a href="#">Components</a></li>
+					<li class="current"><a href="#">Components</a></li>
 					<li><a href="#">Patterns</a></li>
 				</ul>
 			</div>
@@ -35,9 +35,7 @@
 
 		<section>
 			<div id="component-details">
-				<a href="#" class="assets-link">Assets<img
-					src="img/external-icon.png" width="13" height="12"
-					alt="External Icon"></a>
+				<a href="#" class="assets-link">Assets<img src="img/external-icon.png" width="13" height="12" alt="External Icon"></a>
 				<h1>Search Result</h1>
 				<p>
 					Added to the library on
@@ -69,6 +67,13 @@
 			<style type="text/css" scoped="scoped"></style>
 			<div class="component"></div>
 		</div>
+		
+		<div id="component-copy">
+          <code class="html">
+            <pre class="brush: css; highlight: [5, 15]; html-script: true"></pre>
+          </code>
+		  <code class="css"></code>    
+		</div>
 	</div>
 
 	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
@@ -80,5 +85,8 @@
 	<script type="text/javascript" src="js/patterns.js"></script>
 	<script type="text/javascript" src="js/components.js"></script>
 	<script type="text/javascript" src="js/atomic.js"></script>
+	<script type="text/javascript" src="syntaxHighlighter/scripts/shCore.js"></script>
+    <script type="text/javascript" src="syntaxHighlighter/scripts/shBrushPlain.js"></script>
+    <script type="text/javascript">SyntaxHighlighter.all();</script>
 </body>
 </html>
