@@ -1,0 +1,6 @@
+task :default => 'server'
+
+task :server do
+    puts "Running debug server at 127.0.0.1:8084..."
+    system('ruby -rubygems debug-server.rb')
+end
