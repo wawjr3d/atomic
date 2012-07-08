@@ -188,7 +188,10 @@
 	var components = new ComponentList("resources/components.json");
     var patterns = new PatternsList("resources/patterns.json");
 	// TODO: view events go somewhere else? -ck
-	$("ul.tabs").tabs("div.panes > div");
+	$("ul.tabs").tabs("div.panes > div", {
+		effect: "fade",
+		tabs : "li"
+	});
 
 	 components.load();
 	 patterns.load();

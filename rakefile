@@ -1,6 +1,13 @@
 task :default => 'server'
 
-task :server do
+task :sinatra do
     puts "Running debug server at 127.0.0.1:8084..."
     system('ruby -rubygems debug-server.rb')
 end
+
+task :compass do
+    puts "Begin compass watch."
+    system('compass watch')
+end
+
+multitask :server => ['sinatra', 'compass']
