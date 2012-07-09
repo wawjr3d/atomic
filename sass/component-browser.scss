@@ -233,4 +233,22 @@
     li {
         margin-left: 1em;
     }
+    
+    code {
+        position: relative;
+    }
+    
+    code:before {
+        position: absolute; 
+        top: 0;
+        left: 1em;
+        background: #FFF;
+        font-weight: bold;
+        padding: .4em;
+        @include border-radius(5px 5px 0 0);
+    }
+     
+    code.html:before {
+        content: "HTML";
+    }
 }
