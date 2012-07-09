@@ -14,7 +14,7 @@
 	    $componentTitle = $componentDetails.find("h1"),
 	    $componentAuthor = $componentDetails.find(".author"),
 	    $componentData = $("#data"),
-	    $componentHTML = $("#component-copy").find(".html pre"),
+	    $componentHTML = $("#component-copy").find(".html"),
 	    loadedComponents = {};
 
 	// TODO: make this an object and pull out code that shouldnt be a part of
@@ -127,8 +127,8 @@
 			 }, this));
 		},
 
-		displayCopyHTML: function(html) {
-		    $componentHTML.html(html.escapeHTML());
+		displayCopyHTML: function(html) {		    
+		    $componentHTML.html(prettyPrintOne(html.escapeHTML(), "html", true));
 		},
 		
 		displayDetails : function() {
