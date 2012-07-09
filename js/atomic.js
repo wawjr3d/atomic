@@ -15,6 +15,7 @@
 	    $componentAuthor = $componentDetails.find(".author"),
 	    $componentData = $("#data"),
 	    $componentHTML = $("#component-copy").find(".html"),
+	    $componentCss = $("#component-copy").find(".css"),
 	    loadedComponents = {};
 
 	// TODO: make this an object and pull out code that shouldnt be a part of
@@ -94,7 +95,9 @@
 				return "@import '" + this.path + "/" + cssFile + "';";
 			}, this));
 
-			$componentStyles.append(cssPaths.join("\n"));
+			var css = cssPaths.join("\n");
+			$componentStyles.append(css);
+			$componentCss.html(prettyPrintOne(css, "css", true));
 		},
 
 		unloadAllCss : function() {
