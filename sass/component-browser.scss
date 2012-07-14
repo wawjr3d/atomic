@@ -9,6 +9,8 @@
 @import "partials/patterns/colors";
 @import "partials/patterns/fonts";
 
+@import "partials/component-code";
+
 /* ---------- Nav Panel styles ---------- */
 
 #nav-panel{
@@ -217,49 +219,10 @@
 	}
 }
 
-#component-view{
+#component-view {
+    @extend .clearfix;
 	clear: both;
 	padding: 15px;
 	@include box-shadow(inset 0 0 10px 8px rgba(0, 0, 0, .3));
 	background: url(/img/linen.png);
-}
-
-#component-copy {
-    ol {
-        list-style: decimal outside none;
-        padding: 1em 1em 1em 1.5em;
-    }
-    
-    li {
-        margin-left: 1em;
-    }
-    
-    code {
-        display: block;
-        position: relative;
-        font-size: .8em;
-        line-height: 1.2em;
-        margin-top: 1.2em;
-        border-top: solid 1px #CCC;
-    }
-    
-    code:before {
-        position: absolute; 
-        top: -1.2em;
-        left: 1em;
-        background: #FFF;
-        font-weight: bold;
-        padding: .2em .4em 0;
-        border: solid 1px #CCC;
-        border-bottom-width: 0;
-        @include border-radius(5px 5px 0 0);
-    }
-     
-    code.html:before {
-        content: "HTML";
-    }
-     
-    code.css:before {
-        content: "CSS";
-    }
 }
