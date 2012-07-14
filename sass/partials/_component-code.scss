@@ -38,4 +38,14 @@
     code.css:before {
         content: "CSS";
     }
+    
+    code .copy {
+        position: absolute;
+        bottom: 0;
+        right: 1em;
+        background: image-url("copy.png") no-repeat center center;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
 }

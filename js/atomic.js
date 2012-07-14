@@ -18,6 +18,20 @@
 	    $componentCss = $("#component-copy").find(".css"),
 	    loadedComponents = {};
 
+	function addCopyButton($code, text) {
+        var $copyButton = $("<span class='copy'/>");
+        
+        $code.prepend($copyButton);
+        
+        $copyButton.zclip({
+            path: "zclip/ZeroClipboard.swf",
+            copy: text,
+            afterCopy: function() {
+                console.log("copied");
+            }
+        });
+	}
+	
 	// TODO: make this an object and pull out code that shouldnt be a part of
 	// the object
 	var Component = function(propsFile) {
@@ -98,6 +112,7 @@
 			var css = cssPaths.join("\n");
 			$componentStyles.append(css);
 			$componentCss.html(prettyPrintOne(css, "css", true));
+			addCopyButton($componentCss, css);
 		},
 
 		unloadAllCss : function() {
@@ -130,8 +145,9 @@
 			 }, this));
 		},
 
-		displayCopyHTML: function(html) {		    
+		displayCopyHTML: function(html) {
 		    $componentHTML.html(prettyPrintOne(html.escapeHTML(), "html", true));
+		    addCopyButton($componentHTML, html);
 		},
 		
 		displayDetails : function() {
