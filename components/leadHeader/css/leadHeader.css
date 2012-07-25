@@ -1,0 +1,426 @@
+#lead-header {
+	background-color: white;
+	overflow: auto;
+	padding: 1em;
+}
+
+/* line 71, /opt/aptana/signature/src/main/webapp/sass/views/_global.scss */
+.activity-type, #lead-header .external-link, #lead-list li .external-link {
+  font-family: "GandhiSans", Calibri, Verdana, sans-serif;
+  color: #6d9f18;
+  font-size: 0.75em;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+
+#lead-header .input-active [data-input-generated] {
+  display: inline-block;
+}
+/* line 9, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header [data-input-generated] {
+  display: none;
+}
+/* line 13, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header [data-input-name] {
+  display: inline-block;
+}
+/* line 17, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .input-active [data-input-name] {
+  display: none;
+}
+/* line 22, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+html.no-touch #lead-header [data-input-name]:hover, html.no-touch #lead-header #lead-list li [data-input-name].lead-summary.active, #lead-list li html.no-touch #lead-header [data-input-name].lead-summary.active {
+  background-color: #FEFBD8;
+}
+/* line 28, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .header-details {
+  float: left;
+  text-align: left;
+  width: 75%;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+@media all and (max-width: 48em) {
+  /* line 28, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+  #lead-header .header-details {
+    padding-right: 0;
+    position: relative;
+    width: 100%;
+  }
+}
+/* line 40, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+html.touch #lead-header .header-details {
+  padding-right: 0;
+  position: relative;
+}
+/* line 45, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .header-details.loading:after {
+  content: "";
+  background: url(/images/ajaxLoader.gif) no-repeat;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  visibility: visible;
+  top: 40px;
+  margin: 0 1em;
+}
+/* line 58, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .button-container {
+  float: left;
+  width: 20%;
+}
+@media all and (max-width: 48em) {
+  /* line 58, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+  #lead-header .button-container {
+    float: none;
+    width: auto;
+  }
+}
+/* line 67, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header h1 {
+  float: left;
+  position: relative;
+}
+/* line 72, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header input.job-title {
+  max-width: 16em;
+}
+/* line 76, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .loading-element {
+  display: block;
+  float: left;
+}
+/* line 80, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .loading-element.loading {
+  background: url("../images/ajaxLoader.gif");
+  width: 16px;
+  height: 16px;
+  visibility: visible;
+  z-index: 99;
+  overflow: hidden;
+  position: relative;
+  top: 15px;
+  right: -10px;
+}
+@media all and (max-width: 48em) {
+  /* line 93, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+  #lead-header .page-title {
+    position: relative;
+    left: 2em;
+  }
+}
+/* line 100, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .sub-details {
+  clear: left;
+  float: left;
+  height: auto;
+  width: 100%;
+}
+@media all and (max-width: 48em) {
+  /* line 100, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+  #lead-header .sub-details {
+    position: relative;
+    left: 2em;
+  }
+}
+/* line 111, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .company {
+  margin: 1em 0 0;
+  float: left;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #959595;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+}
+/* line 115, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .company.cold {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #438bca;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+}
+/* line 118, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .company[data-input-generated] {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #959595;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+}
+/* line 123, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .location {
+  margin: 1em 1em 0 0;
+  float: left;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #959595;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+}
+/* line 127, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .location.cold {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #438bca;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+}
+/* line 130, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .location[data-input-generated] {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #959595;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+}
+@media all and (max-width: 48em) {
+  /* line 123, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+  #lead-header .location {
+    clear: left;
+  }
+}
+/* line 138, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .add-external-link {
+  display: block;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #438bca;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  margin: 1em 0 0;
+  text-decoration: underline;
+}
+/* line 145, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .edit-copy {
+  font-family: "DroidSerif", Georgia, serif;
+  color: #438bca;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.75em;
+  margin: 2em 0 0;
+  display: block;
+  float: left;
+  clear: left;
+}
+/* line 152, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .edit-copy:hover, #lead-header #lead-list li .edit-copy.lead-summary.active, #lead-list li #lead-header .edit-copy.lead-summary.active {
+  text-decoration: underline;
+}
+/* line 157, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header a:hover, #lead-header #lead-list li a.lead-summary.active, #lead-list li #lead-header a.lead-summary.active {
+  text-decoration: none;
+}
+/* line 161, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .external-link {
+  margin: 1em 0 0 1em;
+  position: relative;
+  float: left;
+}
+/* line 166, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .external-link i {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+/* line 171, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .external-link span {
+  position: relative;
+  right: -5px;
+}
+/* line 174, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .external-link span:hover, #lead-header .external-link #lead-list li span.lead-summary.active, #lead-list li #lead-header .external-link span.lead-summary.active {
+  text-decoration: underline;
+}
+@media all and (max-width: 48em) {
+  /* line 161, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+  #lead-header .external-link {
+    margin: .5em 0 0;
+    clear: left;
+  }
+}
+/* line 183, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+html.touch #lead-header .external-link {
+  margin: .5em 0 0;
+  clear: left;
+}
+/* line 187, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .external-link.cold {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #438bca;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+  clear: left;
+  text-transform: none;
+  letter-spacing: 0em;
+  margin: 1.25em 0 0;
+}
+/* line 194, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .external-link[data-input-generated] {
+  clear: left;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #959595;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  text-transform: none;
+  letter-spacing: 0em;
+  margin: 1em 0 0;
+}
+/* line 205, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .dash {
+  display: inline-block;
+  float: left;
+  margin: 1em .5em 0;
+}
+/* line 212, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .add-activity-container {
+  clear: both;
+}
+/* line 215, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .add-activity-container form.add-activity {
+  margin: 0;
+  top: 0;
+}
+/* line 220, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .add-activity-container .icons-form-notch-activity {
+  right: 3%;
+}
+/* line 225, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header input::-webkit-input-placeholder {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #438bca;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1em;
+}
+/* line 229, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+#lead-header .open-add-activity {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+@media all and (max-width: 48em) {
+  /* line 229, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+  #lead-header .open-add-activity {
+    top: -0.5em;
+    right: .25em;
+    position: relative;
+    float: right;
+  }
+}
+
+/* line 242, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+.open-add-activity {
+  background-color: #276791;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF276791', endColorstr='#FF15405C');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQyN2VhZSIvPjxzdG9wIG9mZnNldD0iMjAlIiBzdG9wLWNvbG9yPSIjNjY5ZGQ1Ii8+PHN0b3Agb2Zmc2V0PSI4MCUiIHN0b3AtY29sb3I9IiM0MjdlYWUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyNzY3OTEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #427eae), color-stop(20%, #669dd5), color-stop(80%, #427eae), color-stop(100%, #276791));
+  background-image: -webkit-linear-gradient(top, #427eae 0%, #669dd5 20%, #427eae 80%, #276791 100%);
+  background-image: -moz-linear-gradient(top, #427eae 0%, #669dd5 20%, #427eae 80%, #276791 100%);
+  background-image: -o-linear-gradient(top, #427eae 0%, #669dd5 20%, #427eae 80%, #276791 100%);
+  background-image: linear-gradient(top, #427eae 0%, #669dd5 20%, #427eae 80%, #276791 100%);
+  -webkit-box-shadow: 0 0 0 2px rgba(14, 62, 93, 0.4);
+  -moz-box-shadow: 0 0 0 2px rgba(14, 62, 93, 0.4);
+  box-shadow: 0 0 0 2px rgba(14, 62, 93, 0.4);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+  font-size: inherit;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+/* line 70, /opt/aptana/signature/src/main/webapp/sass/partials/_buttons.scss */
+.open-add-activity:hover, #lead-list li .open-add-activity.lead-summary.active {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF18577D', endColorstr='#FF276791');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzRjODdiOSIvPjxzdG9wIG9mZnNldD0iMjAlIiBzdG9wLWNvbG9yPSIjN2ViMWU0Ii8+PHN0b3Agb2Zmc2V0PSI4MCUiIHN0b3AtY29sb3I9IiM0Yzg3YjkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0MjdlYWUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4c87b9), color-stop(20%, #7eb1e4), color-stop(80%, #4c87b9), color-stop(100%, #427eae));
+  background-image: -webkit-linear-gradient(top, #4c87b9 0%, #7eb1e4 20%, #4c87b9 80%, #427eae 100%);
+  background-image: -moz-linear-gradient(top, #4c87b9 0%, #7eb1e4 20%, #4c87b9 80%, #427eae 100%);
+  background-image: -o-linear-gradient(top, #4c87b9 0%, #7eb1e4 20%, #4c87b9 80%, #427eae 100%);
+  background-image: linear-gradient(top, #4c87b9 0%, #7eb1e4 20%, #4c87b9 80%, #427eae 100%);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 76, /opt/aptana/signature/src/main/webapp/sass/partials/_buttons.scss */
+.open-add-activity:active {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF103F5D', endColorstr='#FF427EAE');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3Njc5MSIvPjxzdG9wIG9mZnNldD0iNTklIiBzdG9wLWNvbG9yPSIjNDI3ZWFlIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMzM3MTlkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #276791), color-stop(59%, #427eae), color-stop(100%, #33719d));
+  background-image: -webkit-linear-gradient(top, #276791 0%, #427eae 59%, #33719d 100%);
+  background-image: -moz-linear-gradient(top, #276791 0%, #427eae 59%, #33719d 100%);
+  background-image: -o-linear-gradient(top, #276791 0%, #427eae 59%, #33719d 100%);
+  background-image: linear-gradient(top, #276791 0%, #427eae 59%, #33719d 100%);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 245, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+html.touch .open-add-activity {
+  top: -0.5em;
+  right: .25em;
+  position: relative;
+  float: right;
+}
+/* line 251, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+.open-add-activity span {
+  position: relative;
+  top: 2px;
+  left: 5px;
+  color: white;
+}
+@media all and (max-width: 48em) {
+  /* line 251, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+  .open-add-activity span {
+    display: none;
+  }
+}
+/* line 259, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+html.touch .open-add-activity span {
+  display: none;
+}
+/* line 264, /opt/aptana/signature/src/main/webapp/sass/views/_leadHeader.scss */
+.open-add-activity i {
+  float: left;
+}
+
+/* line 1, /opt/aptana/signature/src/main/webapp/sass/views/_leadItem.scss */
+.open-add-activity {
+  color: #438BCA;
+  font-size: .9em;
+}
+/* line 4, /opt/aptana/signature/src/main/webapp/sass/views/_leadItem.scss */
+.open-add-activity:hover, #lead-list li .open-add-activity.lead-summary.active {
+  cursor: pointer;
+}
+/* line 6, /opt/aptana/signature/src/main/webapp/sass/views/_leadItem.scss */
+.open-add-activity:hover a, #lead-list li .open-add-activity.lead-summary.active a {
+  text-decoration: none;
+}
+/* line 10, /opt/aptana/signature/src/main/webapp/sass/views/_leadItem.scss */
+.open-add-activity .icons-add-activity-mobile {
+  display: block;
+  height: 32px;
+  margin: 0 auto 7px auto;
+  width: 32px;
+}

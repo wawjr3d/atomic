@@ -1,0 +1,29 @@
+<div id="lead-header">
+    <div id="action-bar">
+        <button class="side-nav" type="button">
+            <i class="icons-sidebar-icon"></i>
+        </button>
+        <div class="header-details">
+            <h1 class="page-title job-title" data-input-name="title">{{title}}</h1>
+            <div class="sub-details">
+                {{#hasCompany}} <span class="company" data-input-name="company"> {{company}} </span>
+                {{/hasCompany}}
+                {{^hasCompany}} <span class="company cold" data-input-name="company">+ add company </span>
+                {{/hasCompany}} <span class="dash">-</span>
+                {{#hasLocation}} <span class="location" data-input-name="location"> {{location}} </span>
+                {{/hasLocation}}
+                {{^hasLocation}} <span class="location cold" data-input-name="location">+ add location</span>
+                {{/hasLocation}}
+
+                {{#hasUrl}}<a class="external-link" href="{{url}}" target="_blank" data-input-name="url"> <i class="icons-sprite icons-external-link"></i> <span>View Job Post</span></a>{{/hasUrl}}
+                {{^hasUrl}}<span class="external-link cold" data-input-name="url" data-refresh="false">+ add url</span>{{/hasUrl}} <span class="edit-copy" data-editable-group="leadHeader">Click to edit</span>
+            </div>
+        </div>
+        <div class="button-container">
+            <button type="button" class="open-add-activity">
+                <i class="icons-add-activity"></i>
+                <span> Update </span>
+            </button>
+        </div>
+    </div>
+</div>

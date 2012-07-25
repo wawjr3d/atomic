@@ -1,0 +1,15 @@
+{
+	"name": "Add Activity",
+	"author": "The Stratedist",
+	"css": [
+	    "../shared-css/global.css",
+	    "../shared-css/forms.css",
+		"css/addActivity.css"
+	],
+	"templates": {
+		"Default": {
+			"template": "templates/default.html",
+			"data": "demo/default.json"
+		}
+	}
+}

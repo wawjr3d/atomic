@@ -6,3 +6,27 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: "DroidSerif";
+  src: url(/fonts/DroidSerif-Regular-webfont.eot);
+  src: url(/fonts/DroidSerif-Regular-webfont.eot?#iefix) format('eot'), url(/fonts/DroidSerif-Regular-webfont.ttf) format('truetype'), url(/fonts/DroidSerif-Regular-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page-title {
+  float: left;
+  font-family: "DroidSerif", Georgia, serif;
+  color: #0a2f5a;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2.25em;
+}
+
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}

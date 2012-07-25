@@ -1,0 +1,298 @@
+/* line 1, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity {
+  text-align: left;
+  position: relative;
+  height: auto;
+  display: none;
+  clear: both;
+  background-color: #2f5e8e;
+  left: 0;
+  top: 19px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF2F5E8E', endColorstr='#FF558CC1');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJmNWU4ZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzU1OGNjMSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #2f5e8e), color-stop(100%, #558cc1));
+  background-image: -webkit-linear-gradient(top, #2f5e8e 0%, #558cc1 100%);
+  background-image: -moz-linear-gradient(top, #2f5e8e 0%, #558cc1 100%);
+  background-image: -o-linear-gradient(top, #2f5e8e 0%, #558cc1 100%);
+  background-image: linear-gradient(top, #2f5e8e 0%, #558cc1 100%);
+  /* Disable mobile zooming --------------------------------------*/
+}
+/* line 11, /opt/aptana/signature/src/main/webapp/sass/partials/_module.scss */
+form.add-activity.open {
+  display: block;
+}
+@media all and (max-width: 48em) {
+  /* line 1, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+  form.add-activity {
+    left: 0;
+    margin-right: 0;
+  }
+}
+/* line 18, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+html.touch form.add-activity {
+  left: 0;
+  margin-right: 0;
+}
+/* line 23, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity .texture {
+  border-top: 5px #558cc1 solid;
+  overflow: auto;
+}
+/* line 28, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity div.form-group:nth-of-type(1) {
+  margin: 0 5% 0 0;
+  width: 45%;
+}
+@media all and (max-width: 48em) {
+  /* line 28, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+  form.add-activity div.form-group:nth-of-type(1) {
+    float: none;
+    width: 90%;
+  }
+}
+/* line 35, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+html.touch form.add-activity div.form-group:nth-of-type(1) {
+  float: none;
+  width: 90%;
+}
+/* line 41, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity .form-group {
+  width: 50%;
+  float: left;
+  margin: 0;
+}
+@media all and (max-width: 48em) {
+  /* line 41, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+  form.add-activity .form-group {
+    float: none;
+    width: 95%;
+  }
+}
+/* line 49, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+html.touch form.add-activity .form-group {
+  float: none;
+  width: 95%;
+}
+/* line 56, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity input.display-time {
+  border: 0;
+  display: block;
+  height: 2.2em;
+  text-indent: .5em;
+  width: 40%;
+  -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2), inset 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2), inset 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2), inset 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #333333;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.8em;
+  clear: left;
+  float: left;
+  margin: 1% 1% 1% 1%;
+}
+/* line 63, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity select {
+  width: 100%;
+  height: 37px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #333333;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.8em;
+  border: 4px solid #2B567E;
+  float: left;
+  position: relative;
+  top: -2px;
+}
+/* line 71, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity .ui-datepicker-trigger {
+  margin: 0 0 0 5px;
+  float: left;
+}
+/* line 76, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity .note {
+  margin: 0 auto .5em auto;
+}
+/* line 80, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity textarea {
+  border: 0;
+  display: block;
+  height: 6em;
+  text-indent: .5em;
+  width: 98%;
+  -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2), inset 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2), inset 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2), inset 0 2px 10px 2px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: #333333;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.8em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: auto;
+}
+/* line 86, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity input[type="submit"] {
+  background-color: #6a9a1c;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF80AA3D', endColorstr='#FF6A9A1C');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgwYWEzZCIvPjxzdG9wIG9mZnNldD0iMjQlIiBzdG9wLWNvbG9yPSIjOGRiYjQzIi8+PHN0b3Agb2Zmc2V0PSI4OSUiIHN0b3AtY29sb3I9IiM2ZjlmMjIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2YTlhMWMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #80aa3d), color-stop(24%, #8dbb43), color-stop(89%, #6f9f22), color-stop(100%, #6a9a1c));
+  background-image: -webkit-linear-gradient(top, #80aa3d 0%, #8dbb43 24%, #6f9f22 89%, #6a9a1c 100%);
+  background-image: -moz-linear-gradient(top, #80aa3d 0%, #8dbb43 24%, #6f9f22 89%, #6a9a1c 100%);
+  background-image: -o-linear-gradient(top, #80aa3d 0%, #8dbb43 24%, #6f9f22 89%, #6a9a1c 100%);
+  background-image: linear-gradient(top, #80aa3d 0%, #8dbb43 24%, #6f9f22 89%, #6a9a1c 100%);
+  -webkit-box-shadow: 0 0 0 2px rgba(139, 185, 65, 0.4);
+  -moz-box-shadow: 0 0 0 2px rgba(139, 185, 65, 0.4);
+  box-shadow: 0 0 0 2px rgba(139, 185, 65, 0.4);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+  font-size: inherit;
+  padding: 10px 15px;
+  text-decoration: none;
+  border: 0;
+  border-radius: 5px;
+  margin: 0;
+  padding: 5px 10px;
+  -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+/* line 49, /opt/aptana/signature/src/main/webapp/sass/partials/_buttons.scss */
+form.add-activity input[type="submit"]:hover, form.add-activity #lead-list li input[type="submit"].lead-summary.active, #lead-list li form.add-activity input[type="submit"].lead-summary.active {
+  background-color: #91bd49;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF91BD49', endColorstr='#FF7FB921');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwcHQiIHN0b3AtY29sb3I9IiM5MWJkNDkiLz48c3RvcCBvZmZzZXQ9IjI0JSIgc3RvcC1jb2xvcj0iIzlhYzM1NyIvPjxzdG9wIG9mZnNldD0iODklIiBzdG9wLWNvbG9yPSIjODNiYzI4Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjOGRiYjQzIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0pt, #91bd49), color-stop(24%, #9ac357), color-stop(89%, #83bc28), color-stop(100%, #8dbb43));
+  background-image: -webkit-linear-gradient(top, #91bd49 0pt, #9ac357 24%, #83bc28 89%, #8dbb43 100%);
+  background-image: -moz-linear-gradient(top, #91bd49 0pt, #9ac357 24%, #83bc28 89%, #8dbb43 100%);
+  background-image: -o-linear-gradient(top, #91bd49 0pt, #9ac357 24%, #83bc28 89%, #8dbb43 100%);
+  background-image: linear-gradient(top, #91bd49 0pt, #9ac357 24%, #83bc28 89%, #8dbb43 100%);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 56, /opt/aptana/signature/src/main/webapp/sass/partials/_buttons.scss */
+form.add-activity input[type="submit"]:active {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF75A424', endColorstr='#FF80B63D');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc1YTQyNCIvPjxzdG9wIG9mZnNldD0iNTklIiBzdG9wLWNvbG9yPSIjOGRiYjQzIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNzVhNDI0Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #75a424), color-stop(59%, #8dbb43), color-stop(100%, #75a424));
+  background-image: -webkit-linear-gradient(top, #75a424 0%, #8dbb43 59%, #75a424 100%);
+  background-image: -moz-linear-gradient(top, #75a424 0%, #8dbb43 59%, #75a424 100%);
+  background-image: -o-linear-gradient(top, #75a424 0%, #8dbb43 59%, #75a424 100%);
+  background-image: linear-gradient(top, #75a424 0%, #8dbb43 59%, #75a424 100%);
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+/* line 95, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity .static-date {
+  clear: left;
+  display: none;
+  float: left;
+  margin: 3%;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.8em;
+}
+/* line 103, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+form.add-activity .icons-form-notch-activity {
+  position: absolute;
+  top: -12px;
+  right: 11px;
+}
+/* line 110, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+html.touch form.add-activity {
+  /*600px*/
+}
+/* line 111, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+html.touch form.add-activity input[type=text], html.touch form.add-activity input[type=url], html.touch form.add-activity textarea, html.touch form.add-activity select {
+  font-size: 1em;
+  padding: .3em;
+}
+
+/* Mobiscroll mobile calendar */
+/* line 119, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+.dw dwbg {
+  width: auto;
+}
+
+/* line 123, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+li.open form.add-activity.open {
+  left: -336px;
+  margin-right: -401px;
+}
+
+/* line 129, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+.lt-ie9 input[type="submit"] {
+  border: 4px solid #2B567E !important;
+}
+/* line 132, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+.lt-ie9 textarea {
+  border: 4px solid #2B567E !important;
+}
+/* line 135, /opt/aptana/signature/src/main/webapp/sass/views/_addActivity.scss */
+.lt-ie9 input.display-time {
+  border: 4px solid #2B567E !important;
+}
+
+.icons-form-close {
+	background: url('../images/form-close.png') no-repeat;
+	height: 12px;
+	width: 12px;
+	display: block;
+}
+
+.icons-form-notch-activity{
+	background: url('../images/form-notch-activity.png') no-repeat;
+	width: 44px;
+	height: 12px;
+}

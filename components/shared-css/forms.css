@@ -1,0 +1,156 @@
+/* line 8, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+.close-form {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1em;
+}
+
+/* line 15, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+.form-content {
+  overflow: auto;
+  margin: 3% auto;
+  width: 60%;
+}
+@media all and (max-width: 48em) {
+  /* line 15, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+  .form-content {
+    width: 80%;
+  }
+}
+/* line 22, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+html.touch .form-content {
+  width: 80%;
+}
+
+/* line 27, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+.form-title {
+  font-family: "GandhiSans", Calibri, Verdana, sans-serif;
+  color: white;
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0 0 0.3em 0;
+}
+
+/* line 32, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+label {
+  clear: left;
+  float: left;
+  margin: 2% 0 5px 0;
+  position: relative;
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: white;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 0.8em;
+}
+@media all and (max-width: 48em) {
+  /* line 32, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+  label {
+    margin-top: 1em;
+    display: block;
+    float: none;
+  }
+}
+/* line 43, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+html.touch label {
+  margin-top: 1em;
+  display: block;
+  float: none;
+}
+
+/* line 50, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+input[type="radio"] {
+  margin: 0 4% 0 0;
+}
+
+/* line 54, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+label.radio-label {
+  float: none;
+  width: 3em;
+  height: 2em;
+}
+@media all and (max-width: 48em) {
+  /* line 54, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+  label.radio-label {
+    display: inline;
+  }
+}
+/* line 61, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+html.touch label.radio-label {
+  display: inline;
+}
+
+/* line 66, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+.form-question {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.8em;
+}
+@media all and (max-width: 48em) {
+  /* line 66, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+  .form-question {
+    font-size: 1em;
+    margin-top: 1em;
+    display: block;
+  }
+}
+/* line 73, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+html.touch .form-question {
+  font-size: 1em;
+  margin-top: 1em;
+  display: block;
+}
+
+/* line 80, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+.cancel-save {
+  float: right;
+  font-size: 0.8em;
+  margin: 6% 1% 6% 0;
+}
+
+/* line 86, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+.cancel-save a {
+  font-family: "Lucida Grande", "Lucida Sans", Verdana, sans-serif;
+  color: white;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1em;
+  margin: 0 1em 0 0;
+}
+
+/* line 91, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+input:-webkit-input-placeholder {
+  color: #bababa;
+  font-style: italic;
+}
+
+/* line 96, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+input:-moz-placeholder {
+  color: #bababa;
+  font-style: italic;
+}
+
+/* line 101, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+textarea:-webkit-input-placeholder {
+  color: #bababa;
+  font-style: italic;
+}
+
+/* line 106, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+textarea:-moz-placeholder {
+  color: #bababa;
+  font-style: italic;
+}
+
+/* Error messaging ---------------------------------------------*/
+/* line 112, /opt/aptana/signature/src/main/webapp/sass/views/_forms.scss */
+label.error {
+  width: auto;
+  margin: 0 .8em .8em .8em;
+  font-size: .8em;
+  color: #fcbaba;
+}

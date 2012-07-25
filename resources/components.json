@@ -8,6 +8,19 @@
 			"id": 2,
 			"name": "Search Result",
 			"url": "components/searchResult/component.json"
+		}, {
+			"id": 3,
+			"name": "Add Lead",
+			"url": "components/addLead/component.json"
+		}, {
+			"id": 4,
+			"name": "Add Activity",
+			"url": "components/addActivity/component.json"
+		},
+		 {
+			"id": 5,
+			"name": "Lead Header",
+			"url": "components/leadHeader/component.json"
 		}
 	]
 }

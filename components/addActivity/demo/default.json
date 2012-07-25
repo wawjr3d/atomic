@@ -1,0 +1,59 @@
+{
+	"id": "25950",
+	"title": "Cake eater",
+	"company": "Cake factory",
+	"location": "CakeLand USA",
+	"url": "https://cake",
+	"status": "ADDED",
+	"lastUpdated": "1343180235",
+	"createdOn": "1343180235",
+	"activityTypes": [
+		{
+			"action": "application",
+			"description": "Application",
+			"id": "APPLICATION"
+		}, {
+			"action": "recruiterContact",
+			"description": "Contact Recruiter",
+			"id": "RECRUITER_CONTACT"
+		}, {
+			"action": "networkContact",
+			"description": "Contact Network",
+			"id": "NETWORK_CONTACT"
+		}, {
+			"action": "infoMeeting",
+			"description": "Informational Meeting/Call",
+			"id": "INFO_MEETING"
+		}, {
+			"action": "followUp",
+			"description": "Follow Up",
+			"id": "FOLLOW_UP"
+		}, {
+			"action": "phoneScreen",
+			"description": "Phone Screen",
+			"id": "PHONE_SCREEN"
+		}, {
+			"action": "interview",
+			"description": "Interview",
+			"id": "INTERVIEW"
+		}, {
+			"action": "jobOffer",
+			"description": "Job Offer",
+			"id": "JOB_OFFER"
+		}, {
+			"action": "",
+			"description": "---------------------",
+			"id": "DIVIDER"
+		}, {
+			"action": "discussion",
+			"description": "Discussion",
+			"id": "DISCUSSION"
+		}, {
+			"action": "note",
+			"description": "Add a Note",
+			"id": "NOTE"
+		}
+	],
+	"currentDate": "Jul 25",
+	"timeOfOccurrence": 1343237704
+}

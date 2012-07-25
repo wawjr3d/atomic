@@ -1,0 +1,35 @@
+<form class="add-activity open">
+<i class="icons-form-notch-activity"></i>
+<div class="texture">
+    <button type="button" class="close-add-activity close-form"><i class="icons-form-close"/></i>
+    </button>
+    <div class="form-content">
+        <p class="form-title">
+            Add an Update
+        </p>
+        <div class="form-group">
+            <label for="activityType_{{id}}">What type of update is this? *</label>
+            <select id="activityType_{{id}}" name="activityType" class="activityType">
+                <option value="">Select</option>
+                {{#activityTypes}} 
+                <option value="{{action}}">{{description}}</option>
+                {{/activityTypes}}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="display-time_{{id}}">When did (or will) this happen?</label>
+            <input id="display-time_{{id}}" name="display-time" type="text" class="display-time" value="{{currentDate}}" />
+           
+            <input name="timeOfOccurrence" class="time-of-occurrence" type="hidden" value="{{timeOfOccurrence}}"/>
+            <div class="static-date"></div>
+        </div>
+        <label for="note_{{id}}">Comments</label>
+        <textarea id="note_{{id}}" name="note" placeholder="" rows="4" class="note"></textarea>
+        <div class="cancel-save">
+            <a class="close-add-activity">Cancel</a>
+            <input type="submit" value="Add"/>
+        </div>
+    </div>
+</div>
+
+</form>

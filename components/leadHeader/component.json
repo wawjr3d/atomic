@@ -1,0 +1,14 @@
+{
+	"name": "Lead Header",
+	"author": "The Stratedist",
+	"css": [
+	    "../shared-css/global.css",
+		"css/leadHeader.css"
+	],
+	"templates": {
+		"Default": {
+			"template": "templates/default.html",
+			"data": "demo/default.json"
+		}
+	}
+}
