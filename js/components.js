@@ -1,21 +1,23 @@
-var ComponentList = function(propsFile) {
-    this.propsFile = propsFile;
-    this.path = propsFile.substring(0, propsFile.lastIndexOf("/"));
+(function(global) {
+    "use strict";
 
-    this.components = {};
-    this.loaded = $.Deferred();
-}
+    var ComponentList = function(propsFile) {
+        this.propsFile = propsFile;
+        this.path = propsFile.substring(0, propsFile.lastIndexOf("/"));
 
-ComponentList.prototype = {
-   
-    loadComponents: function() {
-        $.getJSON(this.propsFile, $.proxy(function(data) {
-            this.components = data.components;
-            this.loaded.resolve();
-        }, this));
-    },
+        this.components = {};
+        this.loaded = $.Deferred();
+    };
+
+    ComponentList.prototype = {
+        load: function() {
+            $.getJSON(this.propsFile, $.proxy(function(data) {
+                this.components = data.components;
+                this.loaded.resolve();
+            }, this));
+        }
+    };
     
-    load: function() {
-        this.loadComponents();
-    }
-};
+    global.ComponentList = ComponentList;
+})(this);
+
