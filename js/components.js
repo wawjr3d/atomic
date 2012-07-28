@@ -3,8 +3,6 @@
 
     var ComponentList = function(propsFile) {
         this.propsFile = propsFile;
-        this.path = propsFile.substring(0, propsFile.lastIndexOf("/"));
-
         this.components = {};
         this.loaded = $.Deferred();
     };
