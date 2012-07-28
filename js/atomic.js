@@ -215,28 +215,26 @@
 	 components.load();
 	 patterns.load();
 
-	$.when(components.componentsLoaded, patterns.patternsLoaded).then(
-			function() {
-				$('#search input[type=text]').autocomplete(
-						{
-							dataSource : components.components,
-							minimumCharacters : 0,
-							resultsDestination : "#component-list",
-							doInitialRetrieve : true,
-							itemValue : function(item) {
-								return item.name;
-							},
-							itemDisplay : function(item) {
-								return item.name;
-							},
-							filter : function(value, query) {
-								return value.toLowerCase().indexOf(
-										query.toLowerCase()) > -1;
-							}
-						}).bind("autocomplete:item:selected",
-						function(e, item) {
-							loadComponent(item.url);
-						}).focus();
-			});
+	$.when(components.loaded, patterns.patternsLoaded)
+	 .then(function() {
+	     $('#search input[type=text]').autocomplete({
+	         dataSource : components.components,
+	         minimumCharacters : 0,
+	         resultsDestination : "#component-list",
+	         doInitialRetrieve : true,
+	         itemValue : function(item) {
+	             return item.name;
+	         },
+	         itemDisplay : function(item) {
+	             return item.name;
+	         },
+	         filter : function(value, query) {
+	             return value.toLowerCase().indexOf(query.toLowerCase()) > -1;
+	         }
+	     })
+	     .bind("autocomplete:item:selected", function(e, item) {
+	         loadComponent(item.url);
+	     }).focus();
+	 });
 
 })(jQuery, Mustache, ComponentList, PatternsList);
