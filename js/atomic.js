@@ -156,34 +156,29 @@
 				$componentAuthor.html(this.props.author);
 			}, this));
 
-			$.when(this.templatesLoaded).then(
-					$.proxy(function() {
-						var $templateList = $("<ul/>");
+			$.when(this.templatesLoaded).then($.proxy(function() {
+				var $templateList = $("<ul/>");
 
-						for ( var templateId in this.templates) {
-							if (!this.templates.hasOwnProperty(templateId)) {
-								continue;
-							}
+				for (var templateId in this.templates) {
+					if (!this.templates.hasOwnProperty(templateId)) {
+						continue;
+					}
 
-							var $li = $("<li/>").html(templateId).click(
-									(function(tid, component) {
-										return function(e) {
-											component.displayTemplate(tid);
-										}
-									})(templateId, this));
+					var $li = $("<li/>").html(templateId).click((function(tid, component) {
+					    return function(e) {
+					        component.displayTemplate(tid);
+					    }
+					})(templateId, this));
 
-							$templateList.append($li);
-						}
+					$templateList.append($li);
+				}
 
-						$componentStates.find("ul").replaceWith($templateList);
-					}, this));
+				$componentStates.find("ul").replaceWith($templateList);
+			}, this));
 
-			$.when(this.dataLoaded).then(
-					$.proxy(function() {
-
-						$componentData.find("form").replaceWith(json2form(this.data["Default"]));
-
-					}, this));
+			$.when(this.dataLoaded).then($.proxy(function() {
+			    $componentData.find("form").replaceWith(json2form(this.data["Default"]));
+			}, this));
 		},
 
 		destroy : function() {
