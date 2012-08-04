@@ -205,7 +205,7 @@
                     if (component.templates.hasOwnProperty(templateId)) {
                         var $li = $("<li/>").html(templateId).click((function(tid, component) {
                             return function(e) {
-                                component.displayTemplate(tid);
+                                new ComponentRenderer().renderTemplate(component, tid);
                             }
                         })(templateId, component));
 
@@ -220,6 +220,12 @@
         }
         
         return function() {
+            if (ComponentRenderer.instance) {
+                return ComponentRenderer.instance;
+            }
+            
+            ComponentRenderer.instance = this;
+            
             var currentRendering = 0;
             
             this.render = function(component) {
