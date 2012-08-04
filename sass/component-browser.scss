@@ -195,6 +195,10 @@
 		@extend .default-link;
 		cursor: pointer;
 	}
+	
+	li.selected {
+        font-weight: bold;
+	}
 }
 
 #data {

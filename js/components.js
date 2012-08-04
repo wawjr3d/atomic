@@ -168,18 +168,8 @@
             $componentAuthor = $componentDetails.find(".author"),
             $componentData = $("#data"),
             $componentHTML = $("#component-copy").find(".html");
-
-        function displayTemplate(component, templateId) {
-            $.when(component.load())
-             .then(function() {
-                 var template = component.templates[templateId],
-                     data = component.data[templateId];
-                 
-                 var html = Mustache.to_html(template, data);
-                 $componentStage.html(html);
-                 displayCopyHTML(html);
-             });
-        }
+        
+        var SELECTED_CLASS = "selected";
 
         function escapeHTML(str) {                                                                                                        
             return str.replace(/>/g,'&gt;')
@@ -190,6 +180,17 @@
         function displayCopyHTML(html) {
             $componentHTML.html(prettyPrintOne(escapeHTML(html), "html", true));
             addCopyButton($componentHTML, html);
+        }
+        
+        function makeTemplateClickHandler(templateId, component, $templateList) {
+            return function(e) {
+                var $li = $(this);
+                
+                $templateList.find("li").removeClass(SELECTED_CLASS);
+                $li.addClass(SELECTED_CLASS);
+                
+                new ComponentRenderer().renderTemplate(component, templateId);
+            };
         }
 
         function displayDetails(component) {
@@ -203,11 +204,7 @@
                 
                 for (var templateId in component.templates) {
                     if (component.templates.hasOwnProperty(templateId)) {
-                        var $li = $("<li/>").html(templateId).click((function(tid, component) {
-                            return function(e) {
-                                new ComponentRenderer().renderTemplate(component, tid);
-                            }
-                        })(templateId, component));
+                        var $li = $("<li/>").html(templateId).click(makeTemplateClickHandler(templateId, component, $templateList));
 
                         $templateList.append($li);
                     }
@@ -218,7 +215,19 @@
                 $componentData.find("form").replaceWith(json2form(component.data["Default"]));
             });
         }
-        
+
+        function displayTemplate(component, templateId, data) {
+            $.when(component.load())
+             .then(function() {
+                 var template = component.templates[templateId],
+                     templateData = data || component.data[templateId];
+                 
+                 var html = Mustache.to_html(template, templateData);
+                 $componentStage.html(html);
+                 displayCopyHTML(html);
+             });
+        }
+   
         return function() {
             if (ComponentRenderer.instance) {
                 return ComponentRenderer.instance;
@@ -229,13 +238,17 @@
             var currentRendering = 0;
             
             this.render = function(component) {
+                displayDetails(component);
                 this.renderTemplate(component, "Default");
             };
             
-            this.renderTemplate = function(component, template) {
-                displayDetails(component);
-                displayTemplate(component, template);
+            this.renderTemplate = function(component, templateId) {
+                this.renderTemplateWithData(component, templateId);
             };
+            
+            this.renderTemplateWithData = function(component, templateId, data) {
+                displayTemplate(component, templateId, data);
+            }
         };
         
     })();
