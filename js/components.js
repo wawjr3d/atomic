@@ -113,6 +113,8 @@
         },
 
         loadProps: function() {
+            if (this.propsLoaded) { return this.propsLoaded; }
+            
             return this.propsLoaded = $.get(this.descriptor, $.proxy(function(props) {
                 this.props = props;
             }, this), "json");
