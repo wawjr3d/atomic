@@ -1,22 +1,10 @@
 (function(global, $, Mustache, undefined) {
     "use strict";
-
-    String.prototype.escapeHTML = function () {                                                                                                        
-        return this.replace(/>/g,'&gt;')
-                    .replace(/</g,'&lt;')
-                    .replace(/"/g,'&quot;');
-    };
-
+ 
     var $componentView = $("#component-view"),
-        $componentStage = $componentView.children(".component"),
         $componentStyles = $componentView.children("style"),
-        $componentStates = $("#states"),
-        $componentDetails = $("#component-details"), 
-        $componentTitle = $componentDetails.find("h1"),
-        $componentAuthor = $componentDetails.find(".author"),
-        $componentData = $("#data"),
-        $componentHTML = $("#component-copy").find(".html"),
         $componentCss = $("#component-copy").find(".css");
+  
     
     function addCopyButton($code, text) {
         var $copyButton = $("<span class='copy'/>");
@@ -31,8 +19,6 @@
             }
         });
     }
- 
-    
     // Component class
     var Component = function(descriptor) {
         this.descriptor = descriptor;
@@ -96,6 +82,7 @@
             return this.dataLoaded = $.when.apply(this, datas);
         },
 
+        // TODO: reconsider how this works so that rendering is with renderer
         loadAllCss: function() {
             var cssFiles = this.props.css;
             var cssPaths = $.map(cssFiles, $.proxy(function(cssFile) {
@@ -174,6 +161,14 @@
     
     var ComponentRenderer = (function() {
 
+        var $componentStage = $componentView.children(".component"),
+            $componentStates = $("#states"),
+            $componentDetails = $("#component-details"), 
+            $componentTitle = $componentDetails.find("h1"),
+            $componentAuthor = $componentDetails.find(".author"),
+            $componentData = $("#data"),
+            $componentHTML = $("#component-copy").find(".html");
+
         function displayTemplate(component, templateId) {
             $.when(component.load())
              .then(function() {
@@ -186,8 +181,14 @@
              });
         }
 
+        function escapeHTML(str) {                                                                                                        
+            return str.replace(/>/g,'&gt;')
+                        .replace(/</g,'&lt;')
+                        .replace(/"/g,'&quot;');
+        };
+        
         function displayCopyHTML(html) {
-            $componentHTML.html(prettyPrintOne(html.escapeHTML(), "html", true));
+            $componentHTML.html(prettyPrintOne(escapeHTML(html), "html", true));
             addCopyButton($componentHTML, html);
         }
 
