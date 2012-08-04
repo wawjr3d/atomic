@@ -136,8 +136,9 @@
     
     var ComponentList = function(descriptor) {
         this.descriptor = descriptor;
-        this.components = [];
         this.loaded = null;
+        Array.prototype.push.call(this, null);
+        Array.prototype.shift.call(this);
     };
 
     ComponentList.prototype = {
@@ -145,7 +146,6 @@
             if (this.loaded) { return this.loaded; }
             
             return this.loaded = $.getJSON(this.descriptor, $.proxy(function(data) {
-                this.components = data.components;
                 for(var i = 0; i < data.components.length; i++) {
                     var component = data.components[i];
                     Array.prototype.push.call(this, new Component(component.url));
