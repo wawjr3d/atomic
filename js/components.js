@@ -31,7 +31,9 @@
             }
         });
     }
+ 
     
+    // Component class
     var Component = function(descriptor) {
         this.descriptor = descriptor;
         this.path = descriptor.substring(0, descriptor.lastIndexOf("/"));
@@ -57,6 +59,8 @@
         },
 
         loadAllTemplates: function() {
+            if (this.templatesLoaded) { return this.templatesLoaded; }
+            
             var templates = [];
 
             for (var templateId in this.props.templates) {
@@ -79,6 +83,8 @@
         },
 
         loadAllData: function() {
+            if (this.dataLoaded) { return this.dataLoaded; }
+            
             var datas = [];
 
             for (var templateId in this.props.templates) {
@@ -134,6 +140,7 @@
     };
     
     
+    // ComponentList class
     var ComponentList = function(descriptor) {
         this.descriptor = descriptor;
         this.loaded = null;
@@ -161,52 +168,70 @@
             return $.when.apply(this, loadingComponentsProps);
         }
     };
+
+    
+    var ComponentRenderer = (function() {
+
+        function displayTemplate(component, templateId) {
+            $.when(component.load())
+             .then(function() {
+                 var template = component.templates[templateId],
+                     data = component.data[templateId];
+                 
+                 var html = Mustache.to_html(template, data);
+                 $componentStage.html(html);
+                 displayCopyHTML(html);
+             });
+        }
+
+        function displayCopyHTML(html) {
+            $componentHTML.html(prettyPrintOne(html.escapeHTML(), "html", true));
+            addCopyButton($componentHTML, html);
+        }
+
+        function displayDetails(component) {
+            $.when(component.load()).then(function() {
+                var $templateList;
+                
+                $componentTitle.html(component.props.name);
+                $componentAuthor.html(component.props.author);
+
+                $templateList = $("<ul/>");
+                
+                for (var templateId in component.templates) {
+                    if (component.templates.hasOwnProperty(templateId)) {
+                        var $li = $("<li/>").html(templateId).click((function(tid, component) {
+                            return function(e) {
+                                component.displayTemplate(tid);
+                            }
+                        })(templateId, component));
+
+                        $templateList.append($li);
+                    }
+                }
+
+                $componentStates.find("ul").replaceWith($templateList);
+
+                $componentData.find("form").replaceWith(json2form(component.data["Default"]));
+            });
+        }
+        
+        return function() {
+            var currentRendering = 0;
+            
+            this.render = function(component) {
+                this.renderTemplate(component, "Default");
+            };
+            
+            this.renderTemplate = function(component, template) {
+                displayDetails(component);
+                displayTemplate(component, template);
+            };
+        };
+        
+    })();
     
     global.ComponentList = ComponentList;
     global.Component = Component;
+    global.ComponentRenderer = ComponentRenderer;
 })(this, jQuery, Mustache);
-//
-//displayTemplate : function(templateId) {
-//    $.when(this.templatesLoaded, this.dataLoaded)
-//     .then($.proxy(function() {
-//         var template = this.templates[templateId],
-//             data = this.data[templateId];
-//         var html = Mustache.to_html(template, data);
-//         $componentStage.html(html);
-//         this.displayCopyHTML(html);
-//     }, this));
-//},
-//
-//displayCopyHTML: function(html) {
-//    $componentHTML.html(prettyPrintOne(html.escapeHTML(), "html", true));
-//    addCopyButton($componentHTML, html);
-//},
-//
-//displayDetails : function() {
-//    $.when(this.propsLoaded).then($.proxy(function() {
-//        $componentTitle.html(this.props.name);
-//        $componentAuthor.html(this.props.author);
-//    }, this));
-//
-//    $.when(this.templatesLoaded).then($.proxy(function() {
-//        var $templateList = $("<ul/>");
-//
-//        for (var templateId in this.templates) {
-//            if (this.templates.hasOwnProperty(templateId)) {
-//                var $li = $("<li/>").html(templateId).click((function(tid, component) {
-//                    return function(e) {
-//                        component.displayTemplate(tid);
-//                    }
-//                })(templateId, this));
-//
-//                $templateList.append($li);
-//            }
-//        }
-//
-//        $componentStates.find("ul").replaceWith($templateList);
-//    }, this));
-//
-//    $.when(this.dataLoaded).then($.proxy(function() {
-//        $componentData.find("form").replaceWith(json2form(this.data["Default"]));
-//    }, this));
-//},
